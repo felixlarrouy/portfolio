@@ -41,4 +41,5 @@ yarn-error.log*
 next-env.d.ts
 
 /scripts/embed-copyright.mjs
-/public/images/*
+# Full-res photos: keep local / deploy separately; do not commit (avoids huge Git pushes)
+/public/images/
