@@ -17,7 +17,11 @@ export const galleries = {
       intro: 
         "Cette cérémonie a eu lieu à l'Impérial Palace d'Annecy le 9 décembre 2025. J'ai pu couvrir cet événement pour " +
         "l'agence Püls. Cette cérémonie a honoré les athlètes, les marques et les initiatives qui ont marqué l'année 2025, " + 
-        "soulignant une progression constante vers plus d'inclusion, de durabilité et de performance dans l'écosystème du trail running.",
+        "soulignant une progression constante vers plus d'inclusion, de durabilité et de performance dans l'écosystème du trail running. ",
+      introLink: {
+        href: "https://www.puls-agency.com/trail-running-awards-2025-annecy-reportage-puls-media/",
+        label: "Lien vers l'article de presse.",
+      },
       heroSrc: "/images/galleries/trailrunningawards2025/DSC_6321.jpg",
     },
     clipmils: {
