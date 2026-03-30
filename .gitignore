@@ -40,6 +40,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-/scripts/embed-copyright.mjs
+/scripts/
 # Full-res photos: keep local / deploy separately; do not commit (avoids huge Git pushes)
 /public/images/
+/public/images-optimized/

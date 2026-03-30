@@ -25,7 +25,7 @@ export async function GET(_req: Request, context: Context) {
     const dirPath = path.join(
       process.cwd(),
       "public",
-      "images",
+      "images-optimized",
       "galleries",
       slug,
     );
@@ -43,7 +43,7 @@ export async function GET(_req: Request, context: Context) {
       if (!size.width || !size.height) continue;
 
       photos.push({
-        src: `/images/galleries/${slug}/${file}`,
+        src: `/images-optimized/galleries/${slug}/${file}`,
         width: size.width,
         height: size.height,
       });
@@ -59,4 +59,3 @@ export async function GET(_req: Request, context: Context) {
     );
   }
 }
-

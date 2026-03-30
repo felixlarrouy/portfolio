@@ -25,7 +25,7 @@ export default function AboutPage() {
             priority
           />
           <p className="text-sm text-neutral-600">
-            Photo prise par Baptiste Gousset.
+            © Baptiste Gousset
           </p>
         </div>
       </section>

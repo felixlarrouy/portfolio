@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "optimize-images": "node scripts/optimize-images.mjs",
     "embed-copyright": "node scripts/embed-copyright.mjs"
   },
   "dependencies": {
@@ -16,6 +17,7 @@
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-photo-album": "^3.5.1",
+    "sharp": "^0.34.3",
     "yet-another-react-lightbox": "^3.30.1"
   },
   "devDependencies": {
