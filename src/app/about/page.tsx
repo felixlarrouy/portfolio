@@ -57,9 +57,17 @@ export default function AboutPage() {
 
           <div className="space-y-2 text-sm">
             <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.25em] text-neutral-500">
-              <Link href="https://www.instagram.com/felix_larrouy/" className="hover:text-black">
-                Instagram
-              </Link>
+              <div className="space-y-1 text-neutral-600">
+                <p>
+                  Instagram:{" "}
+                  <a
+                    href="https://www.instagram.com/felix_larrouy/"
+                    className="underline underline-offset-4 hover:text-black"
+                  >
+                    @felix_larrouy
+                  </a>
+                </p>
+              </div>
               <div className="space-y-1 text-neutral-600">
                 <p>
                   Email:{" "}
