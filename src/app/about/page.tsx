@@ -7,7 +7,7 @@ export default function AboutPage() {
       <section className="space-y-1">
         <div className="relative max-w-lg overflow-hidden bg-neutral-100">
           <Image
-            src="/images/self1.jpg"
+            src="/images/self1.webp"
             alt=""
             width={1400}
             height={900}
@@ -17,7 +17,7 @@ export default function AboutPage() {
         </div>
         <div className="relative max-w-lg overflow-hidden bg-neutral-100">
           <Image
-            src="/images/self2.jpg"
+            src="/images/self2.webp"
             alt=""
             width={1400}
             height={900}
