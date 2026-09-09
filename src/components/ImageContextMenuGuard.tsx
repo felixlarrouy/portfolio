@@ -4,13 +4,16 @@ import { useEffect } from "react";
 
 export function ImageContextMenuGuard() {
   useEffect(() => {
+    const isImageTarget = (target: EventTarget | null) =>
+      target instanceof Element && target.closest("img") !== null;
+
     const onContextMenu = (e: MouseEvent) => {
-      if (e.target instanceof HTMLImageElement) {
+      if (isImageTarget(e.target)) {
         e.preventDefault();
       }
     };
     const onDragStart = (e: DragEvent) => {
-      if (e.target instanceof HTMLImageElement) {
+      if (isImageTarget(e.target)) {
         e.preventDefault();
       }
     };

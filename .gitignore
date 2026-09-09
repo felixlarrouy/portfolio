@@ -44,3 +44,4 @@ next-env.d.ts
 # Full-res photos: keep local / deploy separately; do not commit (avoids huge Git pushes)
 /public/images/
 /public/images-optimized/
+/public/images-original/

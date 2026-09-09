@@ -16,7 +16,7 @@ export function GalleryCard({ slug, title, heroSrc }: Props) {
   return (
     <Link
       href={`/galleries/${slug}`}
-      className="block"
+      className="group block"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
@@ -32,17 +32,10 @@ export function GalleryCard({ slug, title, heroSrc }: Props) {
         />
         {/* Opacity via inline style so hover works regardless of Tailwind group variants */}
         <div
-          className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center px-4 text-center transition duration-300 ease-out"
-          style={{
-            opacity: hover ? 1 : 0,
-            backgroundColor: hover
-              ? "rgba(255, 255, 255, 0.95)"
-              : "rgba(255, 255, 255, 0)",
-          }}
-          aria-hidden={!hover}
+          className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center px-4 text-center opacity-100 transition duration-300 ease-out md:bg-white/95 md:opacity-0 md:group-hover:opacity-100"
         >
           <h2 
-            className="text-sm font-medium uppercase tracking-[0.2em] text-neutral-900"
+            className="text-sm font-medium uppercase tracking-[0.2em] text-white md:text-neutral-900"
             style={{ textAlign: "center" }}
           >
             {title}

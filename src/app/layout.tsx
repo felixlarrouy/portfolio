@@ -21,10 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-white text-black antialiased">
+      <body className="bg-white text-black antialiased dark:bg-black dark:text-white">
         <ImageContextMenuGuard />
         <div className="flex min-h-screen flex-col">
-          <header className="border-b border-black/5 bg-white">
+          <header className="border-b border-black/5 bg-white dark:border-white/10 dark:bg-black">
             <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
               <Link
                 href="/"
@@ -45,8 +45,8 @@ export default function RootLayout({
           <main className="flex-1">
             <div className="mx-auto max-w-6xl px-6 py-10">{children}</div>
           </main>
-          <footer className="border-t border-black/5 bg-white">
-            <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 text-xs text-neutral-500">
+          <footer className="border-t border-black/5 bg-white dark:border-white/10 dark:bg-black">
+            <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 text-xs text-neutral-500 dark:text-neutral-400">
               <span>
                 © {new Date().getFullYear()} Félix Larrouy. Tous droits
                 réservés.
