@@ -9,6 +9,11 @@ type PrestationPhoto = {
   alt?: string;
 };
 
+type ContentSection = {
+  title: string;
+  text: string;
+};
+
 type PrestationPageProps = {
   number: string;
   title: string;
@@ -19,6 +24,7 @@ type PrestationPageProps = {
     alt: string;
   };
   photos: PrestationPhoto[];
+  contentSections: ContentSection[];
   contactTitle: string;
   contactText: string;
 };
@@ -30,6 +36,7 @@ export function PrestationPage({
   description,
   heroImage,
   photos,
+  contentSections,
   contactTitle,
   contactText,
 }: PrestationPageProps) {
@@ -65,6 +72,21 @@ export function PrestationPage({
             className="object-cover"
           />
         </div>
+      </section>
+
+      {/* Content */}
+      <section className="max-w-3xl space-y-12">
+        {contentSections.map((section) => (
+          <div key={section.title}>
+            <h2 className="text-2xl font-medium tracking-tight">
+              {section.title}
+            </h2>
+
+            <p className="mt-4 leading-7 text-neutral-600 dark:text-neutral-300">
+              {section.text}
+            </p>
+          </div>
+        ))}
       </section>
 
       {/* Examples */}

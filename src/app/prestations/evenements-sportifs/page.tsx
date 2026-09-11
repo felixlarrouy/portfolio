@@ -2,6 +2,13 @@ import fs from "fs";
 import path from "path";
 import { imageSize } from "image-size";
 import { PrestationPage } from "@/components/PrestationPage";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Photographe sportif à Annecy | Événements & outdoor",
+  description:
+    "Photographe sportif basé en Haute-Savoie, spécialisé dans les événements outdoor : trail, ultra-trail, cyclisme, VTT, ski et compétitions en montagne. Annecy, Savoie et Alpes.",
+};
 
 const imageDirectory = path.join(
   process.cwd(),
@@ -33,15 +40,25 @@ export default function EvenementsSportifsPage() {
     <PrestationPage
       number="01"
       title="Événements sportifs"
-      intro="Trail, cyclisme, ski, course à pied et événements outdoor. Je réalise des images qui capturent l'intensité de la compétition, les émotions des participants et l'ambiance de l'événement."
-      description="L'objectif est de vous fournir une série d'images cohérente, dynamique et directement exploitable pour votre communication, vos réseaux sociaux ou vos supports de presse."
+      intro="Je réalise des reportages photo pour des événements de trail, cyclisme (route, gravel, VTT), escalade, ski et autres compétitions outdoor. Basé en Haute-Savoie, j'accompagne les organisateurs, clubs et structures sportives à Annecy, en Savoie et plus largement dans les Alpes."
+      description="De l'action aux émotions des participants, je cherche à retranscrire l'intensité de la compétition et l'environnement dans lequel se déroule votre événement."
       heroImage={{
         src: "/images/prestations/evenements-sportifs/hero.webp",
         alt: "Photographie d'un événement sportif",
       }}
       photos={photos}
-      contactTitle="Un événement à venir ?"
-      contactText="Contactez-moi pour discuter de votre événement, de vos besoins et du type de reportage souhaité."
+      contentSections={[
+        {
+          title: "Un reportage photo au service de votre événement",
+          text: "Je capture des images permettant de retranscrire l'intensité de la compétition, l'engagement des participants et l'atmosphère qui l'entoure. Je couvre les différents temps forts de votre événement afin de créer une série d'images cohérente et directement exploitable pour votre communication : site internet, réseaux sociaux, affiches, ou promotion des prochaines éditions.",
+        },
+        {
+          title: "Photographe sportif en Haute-Savoie et dans les Alpes",
+          text: "Basé à d'Annecy, j'interviens principalement en Haute-Savoie, en Savoie et dans les Alpes. Je peux également me déplacer pour couvrir des événements sportifs partout en France selon les projets.",
+        },
+      ]}
+      contactTitle="Vous organisez un événement sportif ?"
+      contactText="Vous recherchez un photographe pour couvrir votre prochaine course ou événement outdoor ? Contactez-moi pour discuter de votre projet, du format du reportage et de vos besoins en images."
     />
   );
 }

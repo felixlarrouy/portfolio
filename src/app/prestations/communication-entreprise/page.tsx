@@ -1,7 +1,15 @@
 import fs from "fs";
 import path from "path";
+import type { Metadata } from "next";
 import { imageSize } from "image-size";
+
 import { PrestationPage } from "@/components/PrestationPage";
+
+export const metadata: Metadata = {
+  title: "Photographe entreprise à Annecy | Communication & contenu",
+  description:
+    "Photographe professionnel à Annecy pour entreprises, marques et professionnels. Portraits, communication, contenu photo et reportages en Haute-Savoie, Savoie et Alpes.",
+};
 
 const imageDirectory = path.join(
   process.cwd(),
@@ -16,32 +24,42 @@ const imageFiles = [
 ];
 
 const photos = imageFiles.map((file) => {
-    const filePath = path.join(imageDirectory, file);
-    const buffer = fs.readFileSync(filePath);
-    const { width, height } = imageSize(buffer);
+  const filePath = path.join(imageDirectory, file);
+  const buffer = fs.readFileSync(filePath);
+  const { width, height } = imageSize(buffer);
 
   return {
     src: `/images/prestations/communication-entreprise/${file}`,
     width,
     height,
-    alt: "Photographie d'événement sportif",
+    alt: "Photographie professionnelle pour une entreprise",
   };
 });
 
-export default function CommunicationEntreprisePage() {
+export default function Page() {
   return (
     <PrestationPage
       number="03"
       title="Communication & entreprise"
-      intro="Des photographies pensées pour présenter votre activité et construire votre identité visuelle."
-      description="Site internet, réseaux sociaux, communication interne ou supports commerciaux : je crée des images cohérentes avec votre univers et vos besoins."
+      intro="Je crée des images pour les entreprises, marques et professionnels qui souhaitent développer une communication visuelle cohérente et authentique."
+      description="Portraits, reportages, savoir-faire, locaux, produits ou contenus destinés aux réseaux sociaux : je construis des séries d'images adaptées à votre identité et à vos besoins de communication."
       heroImage={{
         src: "/images/prestations/communication-entreprise/hero.webp",
-        alt: "Photographie pour la communication d'une entreprise",
+        alt: "Photographie professionnelle pour une entreprise",
       }}
       photos={photos}
-      contactTitle="Besoin de nouvelles images ?"
-      contactText="Parlons de votre activité, de vos besoins en images et de la manière dont je peux vous accompagner."
+      contentSections={[
+        {
+          title: "Des photographies au service de votre communication",
+          text: "Une image professionnelle permet de mettre en valeur un savoir-faire et de créer une identité visuelle cohérente. Je réalise des reportages photographiques pensés pour s'intégrer naturellement à vos différents supports de communication.",
+        },
+        {
+          title: "Du contenu pour vos différents supports",
+          text: "Les images peuvent être utilisées pour votre site internet, vos réseaux sociaux, vos supports commerciaux, vos dossiers de presse ou vos campagnes de communication. Je peux également produire des séries d'images pensées spécifiquement pour alimenter votre communication dans la durée.",
+        },
+      ]}
+      contactTitle="Un projet de communication ?"
+      contactText="Vous avez besoin de nouvelles images pour votre entreprise, votre marque ou vos supports de communication ? Contactez-moi pour discuter de votre projet et définir ensemble les images dont vous avez besoin."
     />
   );
 }
