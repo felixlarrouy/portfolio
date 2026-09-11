@@ -1,11 +1,11 @@
 export const galleries = {
-    jo2024: {
+    jo2024climb: {
       title: "Épreuves d'escalade — JO de Paris 2024",
       intro: 
         "Série photo réalisée durant les différentes épreuves d'escalade des Jeux Olympiques de Paris 2024. " +
         "Étant un grand passionné d'escalade, j'ai pu acheter des billets pour trois jours d'épreuves et photographier " + 
         "les meilleurs grimpeurs du monde depuis les gradins.",
-      heroSrc: "/images/galleries/jo2024/DSC_1654.webp",
+      heroSrc: "/images/galleries/jo2024climb/DSC_1654.webp",
     },
     trailrunningawards2025: {
       title: "Trail Running Awards 2025",
@@ -58,6 +58,12 @@ export const galleries = {
           " dont l'objectif était de sensibiliser aux bienfaits de la respiration optimale dans sa pratique sportive.",
       },
       heroSrc: "/images/galleries/runandbreath/DSC_4220.webp",
+    },
+    jo2024bike: {
+      title: "Course en ligne — JO de Paris 2024",
+      intro: 
+        "Série photo réalisée durant la course en ligne de cyclisme des Jeux Olympiques de Paris 2024.",
+      heroSrc: "/images/galleries/jo2024bike/IMG_4210.webp",
     },
     clipmils: {
       title: "Backstage de tournage — Clip promotionnel pour la marque MILS",

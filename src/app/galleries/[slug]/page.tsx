@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: PageProps) {
   if (!gallery) return {};
 
   return {
-    title: `${gallery.title} | Photography Portfolio`,
+    title: `${gallery.title} | Felix Larrouy Photographie`,
   };
 }
 
