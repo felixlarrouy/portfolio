@@ -13,7 +13,7 @@ export default function GalleriesPage() {
         </p>
       </header>
 
-      <section className="grid grid-cols-1 gap-2 md:grid-cols-3">
+      <section className="grid grid-cols-2 gap-2 md:grid-cols-3">
         {Object.entries(galleries).map(([slug, gallery]) => (
           <GalleryCard
             key={slug}

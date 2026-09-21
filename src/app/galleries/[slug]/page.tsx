@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { galleries } from "@/data/galleries";
 import { RowsGallery } from "@/components/RowsGallery";
+import { MasonryGallery } from "@/components/MasonryGallery";
 
 type PageProps = {
   params: Promise<{ slug: keyof typeof galleries }>;
@@ -97,7 +98,7 @@ export default async function GalleryPage({ params }: PageProps) {
         </div>
       </header>
 
-    <RowsGallery slug={slug} />
+    <MasonryGallery slug={slug} />
     </div>
   );
 }

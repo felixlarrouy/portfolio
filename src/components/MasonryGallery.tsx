@@ -40,16 +40,18 @@ export function MasonryGallery({ slug }: { slug: string }) {
 
   return (
     <>
-      <MasonryPhotoAlbum
-        photos={photos}
-        columns={(containerWidth) => {
-          if (containerWidth < 600) return 2;
-          if (containerWidth < 900) return 3;
-          return 4;
-        }}
-        spacing={2}
-        onClick={({ index }) => setIndex(index)}
-      />
+      <div className="relative left-1/2 w-screen -translate-x-1/2 px-4 md:px-8">
+        <MasonryPhotoAlbum
+          photos={photos}
+          columns={(containerWidth) => (containerWidth < 768 ? 2 : 5)}
+          padding={(containerWidth) => (containerWidth < 768 ? 3 : 5)}
+          spacing={(containerWidth) => (containerWidth < 768 ? 10 : 25)}
+          componentsProps={{
+            image: { className: "border-3 border-dark" },
+          }}
+          onClick={({ index }) => setIndex(index)}
+        />
+      </div>
 
       <Lightbox
         slides={photos}
