@@ -6,6 +6,7 @@ import "react-photo-album/rows.css";
 import "react-photo-album/masonry.css";
 import { HeaderNav } from "@/components/HeaderNav";
 import { MobileMenu } from "@/components/MobileMenu";
+import { socialLinks } from "@/data/socialLinks";
 
 export const metadata: Metadata = {
   title: "Felix Larrouy Photographie",
@@ -65,11 +66,11 @@ export default function RootLayout({
             <div className="mx-auto max-w-6xl px-6 py-6">
               <div className="flex items-center justify-center gap-6 text-black">
                 <a
-                  href="https://www.instagram.com/felix_larrouy/"
+                  href={socialLinks.instagram.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Instagram"
-                  title="Instagram"
+                  aria-label={socialLinks.instagram.label}
+                  title={socialLinks.instagram.label}
                   className="inline-flex items-center justify-center"
                 >
                   <svg viewBox="0 0 24 24" className="h-6 w-6" aria-hidden="true">
@@ -80,23 +81,23 @@ export default function RootLayout({
                 </a>
 
                 <a
-                  href="https://www.linkedin.com/"
+                  href={socialLinks.linkedin.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                  title="LinkedIn"
+                  aria-label={socialLinks.linkedin.label}
+                  title={socialLinks.linkedin.label}
                   className="inline-flex items-center justify-center text-[1.25rem] font-bold normal-case leading-none"
                 >
-                  <span aria-hidden="true">in</span>
+                  <span aria-hidden="true">{socialLinks.linkedin.text}</span>
                 </a>
 
                 <a
-                  href="mailto:felix.larrouy@gmail.com"
-                  aria-label="Email"
-                  title="Email"
+                  href={socialLinks.email.href}
+                  aria-label={socialLinks.email.label}
+                  title={socialLinks.email.label}
                   className="inline-flex items-center justify-center text-[1.5rem] font-semibold normal-case"
                 >
-                  <span aria-hidden="true">@</span>
+                  <span aria-hidden="true">{socialLinks.email.text}</span>
                 </a>
               </div>
             </div>

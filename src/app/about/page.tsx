@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { socialLinks } from "@/data/socialLinks";
 
 export default function AboutPage() {
   return (
@@ -61,10 +62,10 @@ export default function AboutPage() {
                 <p>
                   Email:{" "}
                   <a
-                    href="mailto:felix.larrouy@gmail.com"
+                    href={socialLinks.email.href}
                     className="underline lowercase underline-offset-4 hover:text-black"
                   >
-                    felix.larrouy@gmail.com
+                    {socialLinks.email.address}
                   </a>
                 </p>
               </div>
@@ -72,10 +73,10 @@ export default function AboutPage() {
                 <p>
                   Instagram:{" "}
                   <a
-                    href="https://www.instagram.com/felix_larrouy/"
+                    href={socialLinks.instagram.href}
                     className="underline lowercase underline-offset-4 hover:text-black"
                   >
-                    @felix_larrouy
+                    {socialLinks.instagram.handle}
                   </a>
                 </p>
               </div>

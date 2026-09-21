@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { socialLinks } from "@/data/socialLinks";
 
 export function MobileMenu() {
   const [open, setOpen] = useState(false);
@@ -95,12 +96,12 @@ export function MobileMenu() {
 
             <div className="absolute bottom-8 left-1/2 flex -translate-x-1/2 items-center gap-8">
               <a
-                href="https://www.instagram.com/felix_larrouy/"
+                href={socialLinks.instagram.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMenu}
-                aria-label="Instagram"
-                title="Instagram"
+                aria-label={socialLinks.instagram.label}
+                title={socialLinks.instagram.label}
               >
                 <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
                   <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" strokeWidth="1.8" />
@@ -109,24 +110,24 @@ export function MobileMenu() {
                 </svg>
               </a>
               <a
-                href="https://www.linkedin.com/"
+                href={socialLinks.linkedin.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMenu}
-                aria-label="LinkedIn"
-                title="LinkedIn"
+                aria-label={socialLinks.linkedin.label}
+                title={socialLinks.linkedin.label}
                 className="text-lg font-bold leading-none"
               >
-                <span aria-hidden="true">in</span>
+                <span aria-hidden="true">{socialLinks.linkedin.text}</span>
               </a>
               <a
-                href="mailto:felix.larrouy@gmail.com"
+                href={socialLinks.email.href}
                 onClick={closeMenu}
-                aria-label="Email"
-                title="Email"
+                aria-label={socialLinks.email.label}
+                title={socialLinks.email.label}
                 className="text-xl font-semibold leading-none"
               >
-                <span aria-hidden="true">@</span>
+                <span aria-hidden="true">{socialLinks.email.text}</span>
               </a>
             </div>
 

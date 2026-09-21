@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { socialLinks } from "@/data/socialLinks";
 
 export function HeaderNav() {
   const pathname = usePathname();
@@ -80,11 +81,11 @@ export function HeaderNav() {
 
       <div className="flex items-center gap-5">
         <a
-          href="https://www.instagram.com/felix_larrouy/"
+          href={socialLinks.instagram.href}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Instagram"
-          title="Instagram"
+          aria-label={socialLinks.instagram.label}
+          title={socialLinks.instagram.label}
         >
           <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden="true">
             <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" strokeWidth="1.8" />
@@ -93,22 +94,22 @@ export function HeaderNav() {
           </svg>
         </a>
         <a
-          href="https://www.linkedin.com/"
+          href={socialLinks.linkedin.href}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="LinkedIn"
-          title="LinkedIn"
+          aria-label={socialLinks.linkedin.label}
+          title={socialLinks.linkedin.label}
           className="text-sm font-bold normal-case leading-none"
         >
-          <span aria-hidden="true">in</span>
+          <span aria-hidden="true">{socialLinks.linkedin.text}</span>
         </a>
         <a
-          href="mailto:felix.larrouy@gmail.com"
-          aria-label="Email"
-          title="Email"
+          href={socialLinks.email.href}
+          aria-label={socialLinks.email.label}
+          title={socialLinks.email.label}
           className="text-base font-semibold normal-case"
         >
-          <span aria-hidden="true">@</span>
+          <span aria-hidden="true">{socialLinks.email.text}</span>
         </a>
       </div>
     </nav>
