@@ -27,7 +27,7 @@ export default function RootLayout({
         <ImageContextMenuGuard />
 
         <div className="flex min-h-screen flex-col">
-          <header className="border-b border-black/5 bg-white">
+          <header className="bg-white pt-4 md:pt-10">
             <div className="mx-auto max-w-6xl px-6">
 
               {/* Header principal */}
@@ -94,8 +94,42 @@ export default function RootLayout({
                     href="/about"
                     className="hover:opacity-60"
                   >
-                    À propos / Contact
+                    À propos
                   </Link>
+
+                  <div className="flex items-center gap-5">
+                    <a
+                      href="https://www.instagram.com/felix_larrouy/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Instagram"
+                      title="Instagram"
+                    >
+                      <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden="true">
+                        <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" strokeWidth="1.8" />
+                        <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" strokeWidth="1.8" />
+                        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+                      </svg>
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="LinkedIn"
+                      title="LinkedIn"
+                      className="text-sm font-bold normal-case leading-none tracking-normal"
+                    >
+                      <span aria-hidden="true">in</span>
+                    </a>
+                    <a
+                      href="mailto:felix.larrouy@gmail.com"
+                      aria-label="Email"
+                      title="Email"
+                      className="text-base font-semibold normal-case"
+                    >
+                      <span aria-hidden="true">@</span>
+                    </a>
+                  </div>
                 </nav>
 
                 {/* Menu mobile */}

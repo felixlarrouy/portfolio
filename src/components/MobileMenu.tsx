@@ -36,7 +36,8 @@ export function MobileMenu() {
 
       {open && (
         <nav className="fixed inset-x-0 top-16 bottom-0 z-50 flex items-center justify-center bg-white px-6">
-          <div className="flex flex-col items-center gap-10 text-center">
+          <div className="relative flex h-full w-full items-center justify-center text-center">
+            <div className="flex flex-col items-center gap-10">
 
             <Link
               href="/galleries"
@@ -87,8 +88,47 @@ export function MobileMenu() {
               onClick={closeMenu}
               className="text-xl font-bold tracking-[0.12em] uppercase hover:opacity-60"
             >
-              À propos / Contact
+              À propos
             </Link>
+
+            </div>
+
+            <div className="absolute bottom-8 left-1/2 flex -translate-x-1/2 items-center gap-8">
+              <a
+                href="https://www.instagram.com/felix_larrouy/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={closeMenu}
+                aria-label="Instagram"
+                title="Instagram"
+              >
+                <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" strokeWidth="1.8" />
+                  <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" strokeWidth="1.8" />
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={closeMenu}
+                aria-label="LinkedIn"
+                title="LinkedIn"
+                className="text-lg font-bold leading-none"
+              >
+                <span aria-hidden="true">in</span>
+              </a>
+              <a
+                href="mailto:felix.larrouy@gmail.com"
+                onClick={closeMenu}
+                aria-label="Email"
+                title="Email"
+                className="text-xl font-semibold leading-none"
+              >
+                <span aria-hidden="true">@</span>
+              </a>
+            </div>
 
           </div>
         </nav>
