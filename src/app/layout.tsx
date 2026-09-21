@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ImageContextMenuGuard } from "@/components/ImageContextMenuGuard";
 import "./globals.css";
 import "react-photo-album/rows.css";
+import "react-photo-album/masonry.css";
 import { MobileMenu } from "@/components/MobileMenu";
 
 export const metadata: Metadata = {
@@ -22,15 +23,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-white text-black antialiased dark:bg-black dark:text-white">
+      <body className="bg-white text-black antialiased">
         <ImageContextMenuGuard />
 
         <div className="flex min-h-screen flex-col">
-          <header className="border-b border-black/5 bg-white dark:border-white/10 dark:bg-black">
+          <header className="border-b border-black/5 bg-white">
             <div className="mx-auto max-w-6xl px-6">
 
               {/* Header principal */}
-              <div className="flex items-center justify-between py-5">
+              <div className="flex h-16 items-center justify-between">
                 <Link
                   href="/"
                   className="text-sm font-semibold tracking-[0.2em] uppercase"
@@ -62,25 +63,25 @@ export default function RootLayout({
 
                     {/* Sous-menu */}
                     <div className="invisible absolute top-full left-0 z-50 w-64 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100">
-                      <div className="border border-black/5 bg-white p-2 shadow-lg dark:border-white/10 dark:bg-black">
+                      <div className="border border-black/5 bg-white p-2 shadow-lg">
 
                         <Link
                           href="/prestations/evenements-sportifs"
-                          className="block px-4 py-3 tracking-[0.15em] hover:bg-neutral-100 dark:hover:bg-neutral-900"
+                          className="block px-4 py-3 tracking-[0.15em] hover:bg-neutral-100"
                         >
                           Événements sportifs
                         </Link>
 
                         <Link
                           href="/prestations/reportage-outdoor"
-                          className="block px-4 py-3 tracking-[0.15em] hover:bg-neutral-100 dark:hover:bg-neutral-900"
+                          className="block px-4 py-3 tracking-[0.15em] hover:bg-neutral-100"
                         >
                           Reportage outdoor
                         </Link>
 
                         <Link
                           href="/prestations/communication-entreprise"
-                          className="block px-4 py-3 tracking-[0.15em] hover:bg-neutral-100 dark:hover:bg-neutral-900"
+                          className="block px-4 py-3 tracking-[0.15em] hover:bg-neutral-100"
                         >
                           Communication & entreprise
                         </Link>
@@ -110,8 +111,8 @@ export default function RootLayout({
             </div>
           </main>
 
-          <footer className="border-t border-black/5 bg-white dark:border-white/10 dark:bg-black">
-            <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 text-xs text-neutral-500 dark:text-neutral-400">
+          <footer className="border-t border-black/5 bg-white">
+            <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 text-xs text-neutral-500">
               <span>
                 © {new Date().getFullYear()} Félix Larrouy. Tous droits
                 réservés.

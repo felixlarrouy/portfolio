@@ -1,54 +1,65 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function MobileMenu() {
   const [open, setOpen] = useState(false);
 
   const closeMenu = () => setOpen(false);
 
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
     <div className="md:hidden">
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className="flex h-8 w-8 items-center justify-center"
+        className="relative z-[60] flex h-8 w-8 items-center justify-center"
         aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
         aria-expanded={open}
       >
-        <span className="text-xl leading-none">
+        <span className="text-2xl leading-none">
           {open ? "×" : "☰"}
         </span>
       </button>
 
       {open && (
-        <nav className="absolute inset-x-0 left-0 z-50 border-t border-black/5 bg-white px-6 py-6">
-          <div className="mx-auto flex max-w-6xl flex-col gap-6 text-xs font-medium tracking-[0.25em] uppercase">
+        <nav className="fixed inset-x-0 top-16 bottom-0 z-50 flex items-center justify-center bg-white px-6">
+          <div className="flex flex-col items-center gap-10 text-center">
 
             <Link
               href="/galleries"
               onClick={closeMenu}
-              className="py-2 hover:opacity-60"
+              className="text-xl font-bold tracking-[0.12em] uppercase hover:opacity-60"
             >
               Galeries photos
             </Link>
 
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col items-center gap-5">
               <Link
                 href="/prestations"
                 onClick={closeMenu}
-                className="py-2 hover:opacity-60"
+                className="text-xl font-bold tracking-[0.12em] uppercase hover:opacity-60"
               >
                 Prestations
               </Link>
 
-              <div className="ml-4 flex flex-col gap-4 border-l border-black/10 pl-4 text-[11px] tracking-[0.15em]">
-
+              <div className="flex flex-col items-center gap-4">
                 <Link
                   href="/prestations/evenements-sportifs"
                   onClick={closeMenu}
-                  className="hover:opacity-60"
+                  className="text-sm font-semibold tracking-[0.1em] uppercase text-neutral-600 hover:text-black"
                 >
                   Événements sportifs
                 </Link>
@@ -56,7 +67,7 @@ export function MobileMenu() {
                 <Link
                   href="/prestations/reportage-outdoor"
                   onClick={closeMenu}
-                  className="hover:opacity-60"
+                  className="text-sm font-semibold tracking-[0.1em] uppercase text-neutral-600 hover:text-black"
                 >
                   Reportage outdoor
                 </Link>
@@ -64,18 +75,17 @@ export function MobileMenu() {
                 <Link
                   href="/prestations/communication-entreprise"
                   onClick={closeMenu}
-                  className="hover:opacity-60"
+                  className="text-sm font-semibold tracking-[0.1em] uppercase text-neutral-600 hover:text-black"
                 >
                   Communication & entreprise
                 </Link>
-
               </div>
             </div>
 
             <Link
               href="/about"
               onClick={closeMenu}
-              className="py-2 hover:opacity-60"
+              className="text-xl font-bold tracking-[0.12em] uppercase hover:opacity-60"
             >
               À propos / Contact
             </Link>

@@ -6,10 +6,8 @@ import { MasonryPhotoAlbum } from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
-// import optional lightbox plugins
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
-import "yet-another-react-lightbox/plugins/thumbnails.css";
 
 type Photo = {
   src: string;
@@ -17,47 +15,41 @@ type Photo = {
   height: number;
 };
 
-export function HomeGallery() {
+export function MasonryGallery({ slug }: { slug: string }) {
   const [photos, setPhotos] = useState<Photo[]>([]);
   const [index, setIndex] = useState(-1);
 
   useEffect(() => {
     let isMounted = true;
 
-    fetch("/api/home-photos")
+    fetch(`/api/galleries/${slug}`)
       .then((res) => res.json())
       .then((data: Photo[]) => {
-        if (isMounted) {
-          setPhotos(data);
-        }
+        if (isMounted) setPhotos(data);
       })
       .catch((error) => {
-        console.error("Failed to load home photos", error);
+        console.error(`Failed to load ${slug} photos`, error);
       });
 
     return () => {
       isMounted = false;
     };
-  }, []);
+  }, [slug]);
 
-  if (!photos.length) {
-    return null;
-  }
+  if (!photos.length) return null;
 
   return (
     <>
-      <div className="relative left-1/2 w-screen -translate-x-1/2 px-4 md:px-8">
-        <MasonryPhotoAlbum
-          photos={photos}
-          columns={(containerWidth) => (containerWidth < 768 ? 2 : 5)}
-          padding={(containerWidth) => (containerWidth < 768 ? 3 : 5)}
-          spacing={(containerWidth) => (containerWidth < 768 ? 10 : 25)}
-          componentsProps={{
-            image: { className: "border-3 border-dark" },
-          }}
-          onClick={({ index }) => setIndex(index)}
-        />
-      </div>
+      <MasonryPhotoAlbum
+        photos={photos}
+        columns={(containerWidth) => {
+          if (containerWidth < 600) return 2;
+          if (containerWidth < 900) return 3;
+          return 4;
+        }}
+        spacing={2}
+        onClick={({ index }) => setIndex(index)}
+      />
 
       <Lightbox
         slides={photos}
@@ -69,4 +61,3 @@ export function HomeGallery() {
     </>
   );
 }
-
