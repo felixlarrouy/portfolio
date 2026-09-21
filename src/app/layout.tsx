@@ -32,18 +32,22 @@ export default function RootLayout({
 
               {/* Header principal */}
               <div className="flex h-16 items-center justify-between">
-                <Link
-                  href="/"
-                  className="text-sm font-semibold tracking-[0.2em] uppercase"
-                >
-                  Félix Larrouy
-                </Link>
+                <div className="flex flex-col">
+                  <Link
+                    href="/"
+                    className="text-3xl font-medium"
+                  >
+                    Félix Larrouy
+                  </Link>
+                  <div className="text-sm font-medium text-neutral-500">
+                    <p>Photographe outdoor basé à Annecy, France</p>
+                  </div>
+                </div>
 
                 {/* Navigation desktop */}
-                <nav className="hidden items-center gap-6 text-xs font-medium tracking-[0.25em] uppercase md:flex">
+                <nav className="hidden items-center gap-6 text-base font-medium md:flex">
                   <Link
                     href="/galleries"
-                    className="hover:opacity-60"
                   >
                     Galeries photos
                   </Link>
@@ -52,7 +56,7 @@ export default function RootLayout({
                   <div className="group relative">
                     <Link
                       href="/prestations"
-                      className="flex items-center gap-2 py-2 hover:opacity-60"
+                      className="flex items-center gap-2 py-2"
                     >
                       Prestations
 
@@ -67,21 +71,21 @@ export default function RootLayout({
 
                         <Link
                           href="/prestations/evenements-sportifs"
-                          className="block px-4 py-3 tracking-[0.15em] hover:bg-neutral-100"
+                          className="block px-4 py-3"
                         >
                           Événements sportifs
                         </Link>
 
                         <Link
                           href="/prestations/reportage-outdoor"
-                          className="block px-4 py-3 tracking-[0.15em] hover:bg-neutral-100"
+                          className="block px-4 py-3"
                         >
                           Reportage outdoor
                         </Link>
 
                         <Link
                           href="/prestations/communication-entreprise"
-                          className="block px-4 py-3 tracking-[0.15em] hover:bg-neutral-100"
+                          className="block px-4 py-3"
                         >
                           Communication & entreprise
                         </Link>
@@ -92,7 +96,6 @@ export default function RootLayout({
 
                   <Link
                     href="/about"
-                    className="hover:opacity-60"
                   >
                     À propos
                   </Link>
@@ -117,7 +120,7 @@ export default function RootLayout({
                       rel="noopener noreferrer"
                       aria-label="LinkedIn"
                       title="LinkedIn"
-                      className="text-sm font-bold normal-case leading-none tracking-normal"
+                      className="text-sm font-bold normal-case leading-none"
                     >
                       <span aria-hidden="true">in</span>
                     </a>
@@ -144,19 +147,6 @@ export default function RootLayout({
               {children}
             </div>
           </main>
-
-          <footer className="border-t border-black/5 bg-white">
-            <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 text-xs text-neutral-500">
-              <span>
-                © {new Date().getFullYear()} Félix Larrouy. Tous droits
-                réservés.
-              </span>
-
-              <span className="tracking-[0.25em] uppercase">
-                Photographe professionnel
-              </span>
-            </div>
-          </footer>
         </div>
       </body>
     </html>

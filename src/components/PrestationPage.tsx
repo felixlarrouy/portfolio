@@ -45,11 +45,11 @@ export function PrestationPage({
       {/* Hero */}
       <section className="grid grid-cols-1 gap-10 md:grid-cols-2 md:items-center md:gap-16">
         <div>
-          <p className="mb-4 text-xs font-medium tracking-[0.25em] text-neutral-500 uppercase">
+          <p className="mb-4 text-xs font-medium text-neutral-500">
             {number} — Prestations
           </p>
 
-          <h1 className="text-4xl font-medium tracking-tight md:text-5xl">
+          <h1 className="text-4xl font-medium md:text-5xl">
             {title}
           </h1>
 
@@ -78,7 +78,7 @@ export function PrestationPage({
       <section className="max-w-3xl space-y-12">
         {contentSections.map((section) => (
           <div key={section.title}>
-            <h2 className="text-2xl font-medium tracking-tight">
+            <h2 className="text-2xl font-medium">
               {section.title}
             </h2>
 
@@ -92,7 +92,7 @@ export function PrestationPage({
       {/* Examples */}
       <section>
         <div className="mb-8">
-          <h2 className="mt-3 text-2xl font-medium tracking-tight">
+            <h2 className="mt-3 text-2xl font-medium">
             Quelques images
           </h2>
         </div>
@@ -109,7 +109,7 @@ export function PrestationPage({
       {/* Contact */}
       <section className="border-t border-black/10 pt-12">
         <div className="max-w-2xl">
-          <h2 className="text-2xl font-medium tracking-tight">
+            <h2 className="text-2xl font-medium">
             {contactTitle}
           </h2>
 
@@ -119,7 +119,7 @@ export function PrestationPage({
 
           <Link
             href="/about"
-            className="mt-6 inline-block text-xs font-medium tracking-[0.2em] uppercase underline underline-offset-4 hover:opacity-60"
+            className="mt-6 inline-block text-xs font-medium underline underline-offset-4 hover:opacity-60"
           >
             Me contacter →
           </Link>

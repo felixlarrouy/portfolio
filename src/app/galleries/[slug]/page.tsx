@@ -39,14 +39,14 @@ export default async function GalleryPage({ params }: PageProps) {
       <header className="flex min-w-0 flex-col gap-6">
         <Link
           href="/galleries"
-          className="self-start text-[11px] uppercase tracking-[0.25em] text-neutral-500 hover:text-black"
+          className="self-start text-[11px] text-neutral-500 hover:text-black"
         >
           ← Retour aux galeries
         </Link>
 
         <div className="min-w-0 space-y-8 text-center">
           <h1 
-            className="mx-auto w-fit max-w-xl text-2xl font-bold uppercase tracking-[0.12em]"
+            className="mx-auto w-fit max-w-xl text-2xl font-bold"
             style={{ textAlign: "center" }}
           >
             {gallery.title}

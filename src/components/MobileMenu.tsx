@@ -42,7 +42,7 @@ export function MobileMenu() {
             <Link
               href="/galleries"
               onClick={closeMenu}
-              className="text-xl font-bold tracking-[0.12em] uppercase hover:opacity-60"
+              className="text-3xl font-semibold hover:opacity-60"
             >
               Galeries photos
             </Link>
@@ -51,7 +51,7 @@ export function MobileMenu() {
               <Link
                 href="/prestations"
                 onClick={closeMenu}
-                className="text-xl font-bold tracking-[0.12em] uppercase hover:opacity-60"
+                className="text-3xl font-semibold hover:opacity-60"
               >
                 Prestations
               </Link>
@@ -60,7 +60,7 @@ export function MobileMenu() {
                 <Link
                   href="/prestations/evenements-sportifs"
                   onClick={closeMenu}
-                  className="text-sm font-semibold tracking-[0.1em] uppercase text-neutral-600 hover:text-black"
+                  className="text-sm font-semibold text-neutral-600 hover:text-black"
                 >
                   Événements sportifs
                 </Link>
@@ -68,7 +68,7 @@ export function MobileMenu() {
                 <Link
                   href="/prestations/reportage-outdoor"
                   onClick={closeMenu}
-                  className="text-sm font-semibold tracking-[0.1em] uppercase text-neutral-600 hover:text-black"
+                  className="text-sm font-semibold text-neutral-600 hover:text-black"
                 >
                   Reportage outdoor
                 </Link>
@@ -76,7 +76,7 @@ export function MobileMenu() {
                 <Link
                   href="/prestations/communication-entreprise"
                   onClick={closeMenu}
-                  className="text-sm font-semibold tracking-[0.1em] uppercase text-neutral-600 hover:text-black"
+                  className="text-sm font-semibold text-neutral-600 hover:text-black"
                 >
                   Communication & entreprise
                 </Link>
@@ -86,7 +86,7 @@ export function MobileMenu() {
             <Link
               href="/about"
               onClick={closeMenu}
-              className="text-xl font-bold tracking-[0.12em] uppercase hover:opacity-60"
+              className="text-3xl font-semibold hover:opacity-60"
             >
               À propos
             </Link>

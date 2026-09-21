@@ -32,7 +32,7 @@ export default function AboutPage() {
 
       <section className="space-y-8">
         <div className="space-y-3">
-          <h2 className="text-xs font-medium tracking-[0.3em] uppercase">
+          <h2 className="text-lg font-medium">
             À propos
           </h2>
           <p className="max-w-prose text-sm leading-relaxed text-neutral-600">
@@ -51,12 +51,12 @@ export default function AboutPage() {
         </div>
 
         <div className="space-y-3">
-          <h2 className="text-xs font-medium tracking-[0.3em] uppercase">
+          <h2 className="text-lg font-medium">
             Contact
           </h2>
 
           <div className="space-y-2 text-sm">
-            <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.25em] text-neutral-500">
+            <div className="flex flex-wrap gap-3 text-xs text-neutral-500">
               <div className="space-y-1 text-neutral-600">
                 <p>
                   Email:{" "}

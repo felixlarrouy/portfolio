@@ -32,11 +32,11 @@ export default function PrestationsPage() {
   return (
     <div className="space-y-16">
       <section className="max-w-3xl">
-        <p className="mb-4 text-xs font-medium tracking-[0.25em] text-neutral-500 uppercase">
+        <p className="mb-4 text-xs font-medium text-neutral-500">
           Prestations
         </p>
 
-        <h1 className="text-4xl font-medium tracking-tight md:text-5xl">
+        <h1 className="text-4xl font-medium md:text-5xl">
           Des images pour raconter votre projet.
         </h1>
       </section>
@@ -59,11 +59,11 @@ export default function PrestationsPage() {
             </div>
 
             <div className="mt-5">
-              <p className="mb-2 text-xs tracking-[0.2em] text-neutral-500 uppercase">
+              <p className="mb-2 text-xs text-neutral-500">
                 {prestation.number}
               </p>
 
-              <h2 className="text-xl font-medium tracking-tight">
+              <h2 className="text-xl font-medium">
                 {prestation.title}
               </h2>
 
@@ -71,7 +71,7 @@ export default function PrestationsPage() {
                 {prestation.description}
               </p>
 
-              <p className="mt-4 text-xs font-medium tracking-[0.2em] uppercase underline underline-offset-4">
+              <p className="mt-4 text-xs font-medium underline underline-offset-4">
                 Découvrir →
               </p>
             </div>
