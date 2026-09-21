@@ -32,9 +32,9 @@ export default function AboutPage() {
       </section>
 
       <section className="space-y-8">
-        <div className="space-y-3">
+        <div className="space-y-6">
           <h2 className="text-lg font-medium">
-            À propos
+            Un passioné de sports de montagnes qui aime transmettre cette passion en images.
           </h2>
           <p className="max-w-prose text-sm leading-relaxed text-neutral-600">
             Aussi loin que je m'en souvienne, j'ai toujours eu un appareil photo entre les mains. Du Kodak jetable lors des premières 
@@ -57,29 +57,27 @@ export default function AboutPage() {
           </h2>
 
           <div className="space-y-2 text-sm">
-            <div className="flex flex-wrap gap-3 text-xs text-neutral-500">
-              <div className="space-y-1 text-neutral-600">
-                <p>
-                  Email:{" "}
-                  <a
-                    href={socialLinks.email.href}
-                    className="underline lowercase underline-offset-4 hover:text-black"
-                  >
-                    {socialLinks.email.address}
-                  </a>
-                </p>
-              </div>
-              <div className="space-y-1 text-neutral-600">
-                <p>
-                  Instagram:{" "}
-                  <a
-                    href={socialLinks.instagram.href}
-                    className="underline lowercase underline-offset-4 hover:text-black"
-                  >
-                    {socialLinks.instagram.handle}
-                  </a>
-                </p>
-              </div>
+            <div className="space-y-1 text-neutral-600">
+              <p>
+                Email:{" "}
+                <a
+                  href={socialLinks.email.href}
+                  className="underline lowercase underline-offset-4 hover:text-black"
+                >
+                  {socialLinks.email.address}
+                </a>
+              </p>
+            </div>
+            <div className="space-y-1 text-neutral-600">
+              <p>
+                Instagram:{" "}
+                <a
+                  href={socialLinks.instagram.href}
+                  className="underline lowercase underline-offset-4 hover:text-black"
+                >
+                  {socialLinks.instagram.handle}
+                </a>
+              </p>
             </div>
           </div>
         </div>

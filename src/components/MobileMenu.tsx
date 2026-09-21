@@ -36,7 +36,7 @@ export function MobileMenu() {
       </button>
 
       {open && (
-        <nav className="fixed inset-x-0 top-16 bottom-0 z-50 flex items-center justify-center bg-white px-6">
+        <nav className="fixed inset-x-0 top-[110px] bottom-0 z-30 flex items-center justify-center bg-white px-6">
           <div className="relative flex h-full w-full items-center justify-center text-center">
             <div className="flex flex-col items-center gap-10">
 

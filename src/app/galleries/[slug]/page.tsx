@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { galleries } from "@/data/galleries";
-import { RowsGallery } from "@/components/RowsGallery";
 import { MasonryGallery } from "@/components/MasonryGallery";
 
 type PageProps = {
@@ -39,7 +38,7 @@ export default async function GalleryPage({ params }: PageProps) {
       <header className="flex min-w-0 flex-col gap-6">
         <Link
           href="/galleries"
-          className="self-start text-[11px] text-neutral-500 hover:text-black"
+          className="self-start text-base text-neutral-500 hover:text-black"
         >
           ← Retour aux galeries
         </Link>

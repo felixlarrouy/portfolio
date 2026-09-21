@@ -29,11 +29,11 @@ export default function RootLayout({
         <ImageContextMenuGuard />
 
         <div className="flex min-h-screen flex-col">
-          <header className="bg-white pt-4 md:pt-10">
+          <header className="relative z-40 bg-white pt-4 md:pt-10">
             <div className="mx-auto max-w-6xl px-6">
 
               {/* Header principal */}
-              <div className="flex h-16 items-center justify-between">
+              <div className="flex items-start justify-between gap-4">
                 <div className="flex flex-col">
                   <Link
                     href="/"

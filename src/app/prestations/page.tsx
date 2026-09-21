@@ -48,7 +48,7 @@ export default function PrestationsPage() {
             href={prestation.href}
             className="group block"
           >
-            <div className="relative aspect-[4/5] overflow-hidden rounded-lg bg-neutral-100">
+            <div className="relative aspect-[4/5] overflow-hidden border-3 border-dark bg-neutral-100">
               <Image
                 src={prestation.image}
                 alt={prestation.title}
