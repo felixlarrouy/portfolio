@@ -5,7 +5,7 @@ export default function GalleriesPage() {
   return (
     <div className="space-y-8">
       <header className="space-y-2">
-        <p className="max-w-xl text-base text-neutral-600">
+        <p className="max-w-xl text-base font-medium text-neutral-600">
           Cliquez sur une galerie pour découvrir l&apos;ensemble des photos.
         </p>
       </header>
