@@ -45,7 +45,7 @@ export function PrestationPage({
       {/* Hero */}
       <section className="grid grid-cols-1 gap-10 md:grid-cols-2 md:items-center md:gap-16">
         <div>
-          <p className="mb-4 text-xs font-medium tracking-[0.25em] text-neutral-500 uppercase dark:text-neutral-400">
+          <p className="mb-4 text-xs font-medium tracking-[0.25em] text-neutral-500 uppercase">
             {number} — Prestations
           </p>
 
@@ -53,16 +53,16 @@ export function PrestationPage({
             {title}
           </h1>
 
-          <p className="mt-6 leading-7 text-neutral-600 dark:text-neutral-300">
+          <p className="mt-6 leading-7 text-neutral-600">
             {intro}
           </p>
 
-          <p className="mt-4 leading-7 text-neutral-600 dark:text-neutral-300">
+          <p className="mt-4 leading-7 text-neutral-600">
             {description}
           </p>
         </div>
 
-        <div className="relative aspect-[1/1] overflow-hidden rounded-lg bg-neutral-100 dark:bg-neutral-900">
+        <div className="relative aspect-[1/1] overflow-hidden rounded-lg bg-neutral-100">
           <Image
             src={heroImage.src}
             alt={heroImage.alt}
@@ -82,7 +82,7 @@ export function PrestationPage({
               {section.title}
             </h2>
 
-            <p className="mt-4 leading-7 text-neutral-600 dark:text-neutral-300">
+            <p className="mt-4 leading-7 text-neutral-600">
               {section.text}
             </p>
           </div>
@@ -107,13 +107,13 @@ export function PrestationPage({
       </section>
 
       {/* Contact */}
-      <section className="border-t border-black/10 pt-12 dark:border-white/10">
+      <section className="border-t border-black/10 pt-12">
         <div className="max-w-2xl">
           <h2 className="text-2xl font-medium tracking-tight">
             {contactTitle}
           </h2>
 
-          <p className="mt-4 leading-7 text-neutral-600 dark:text-neutral-300">
+          <p className="mt-4 leading-7 text-neutral-600">
             {contactText}
           </p>
 

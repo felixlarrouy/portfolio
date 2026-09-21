@@ -32,7 +32,7 @@ export default function PrestationsPage() {
   return (
     <div className="space-y-16">
       <section className="max-w-3xl">
-        <p className="mb-4 text-xs font-medium tracking-[0.25em] text-neutral-500 uppercase dark:text-neutral-400">
+        <p className="mb-4 text-xs font-medium tracking-[0.25em] text-neutral-500 uppercase">
           Prestations
         </p>
 
@@ -48,7 +48,7 @@ export default function PrestationsPage() {
             href={prestation.href}
             className="group block"
           >
-            <div className="relative aspect-[4/5] overflow-hidden rounded-lg bg-neutral-100 dark:bg-neutral-900">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-lg bg-neutral-100">
               <Image
                 src={prestation.image}
                 alt={prestation.title}
@@ -59,7 +59,7 @@ export default function PrestationsPage() {
             </div>
 
             <div className="mt-5">
-              <p className="mb-2 text-xs tracking-[0.2em] text-neutral-500 uppercase dark:text-neutral-400">
+              <p className="mb-2 text-xs tracking-[0.2em] text-neutral-500 uppercase">
                 {prestation.number}
               </p>
 
@@ -67,7 +67,7 @@ export default function PrestationsPage() {
                 {prestation.title}
               </h2>
 
-              <p className="mt-3 text-sm leading-6 text-neutral-600 dark:text-neutral-300">
+              <p className="mt-3 text-sm leading-6 text-neutral-600">
                 {prestation.description}
               </p>
 

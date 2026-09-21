@@ -23,7 +23,7 @@ export function MobileMenu() {
       </button>
 
       {open && (
-        <nav className="absolute inset-x-0 left-0 z-50 border-t border-black/5 bg-white px-6 py-6 dark:border-white/10 dark:bg-black">
+        <nav className="absolute inset-x-0 left-0 z-50 border-t border-black/5 bg-white px-6 py-6">
           <div className="mx-auto flex max-w-6xl flex-col gap-6 text-xs font-medium tracking-[0.25em] uppercase">
 
             <Link
@@ -43,7 +43,7 @@ export function MobileMenu() {
                 Prestations
               </Link>
 
-              <div className="ml-4 flex flex-col gap-4 border-l border-black/10 pl-4 text-[11px] tracking-[0.15em] dark:border-white/10">
+              <div className="ml-4 flex flex-col gap-4 border-l border-black/10 pl-4 text-[11px] tracking-[0.15em]">
 
                 <Link
                   href="/prestations/evenements-sportifs"

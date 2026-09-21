@@ -8,7 +8,7 @@ export default function Home() {
       <section className="flex items-end justify-between gap-4">
         <div className="space-y-1">
           <p className="text-xs font-medium tracking-[0.3em] uppercase text-neutral-500">
-            Photographe professionnel
+            Photographe outdoor
           </p>
           <p className="text-xs font-medium tracking-[0.3em] uppercase text-neutral-500">
             Basé à Annecy, France
