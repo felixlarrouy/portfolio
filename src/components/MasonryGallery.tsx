@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { MasonryPhotoAlbum } from "react-photo-album";
 
 import Lightbox from "yet-another-react-lightbox";
@@ -19,7 +19,7 @@ type Photo = {
 
 export function MasonryGallery({ slug }: { slug: string }) {
   const [index, setIndex] = useState(-1);
-  const photos = (manifest[slug] ?? []) as Photo[];
+  const photos = (manifest as Record<string, Photo[]>)[slug] ?? [];
 
   if (!photos.length) return null;
 
