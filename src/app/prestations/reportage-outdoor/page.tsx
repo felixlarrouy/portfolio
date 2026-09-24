@@ -41,7 +41,7 @@ export default function Page() {
     <PrestationPage
       number="02"
       title="Reportage outdoor"
-      intro="Je réalise des reportages photo en montagne et en pleine nature pour raconter des aventures, des pratiques sportives et des projets outdoor. Mon approche associe action, environnement et moments de vie."
+      intro="Je réalise des reportages photo en montagne et en pleine nature pour raconter des aventures, des expéditions, des pratiques sportives et des projets outdoor. J'aime y retranscire l'action, l'environnement mais aussi les moments de vie."
       description="Trail, randonnée, alpinisme, ski, vélo ou aventure : je m'adapte aux contraintes du terrain pour créer des images immersives qui retranscrivent l'expérience vécue."
       heroImage={{
         src: "/images/prestations/reportage-outdoor/hero.webp",
