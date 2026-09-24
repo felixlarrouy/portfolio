@@ -10,7 +10,7 @@ import { socialLinks } from "@/data/socialLinks";
 
 export const metadata: Metadata = {
   title: "Felix Larrouy Photographie",
-  description: "Minimal portfolio to showcase photography work.",
+  description: "Photographe outdoor et aventure autour d'Annecy.",
 };
 
 export const viewport: Viewport = {
