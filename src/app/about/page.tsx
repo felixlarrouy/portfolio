@@ -34,7 +34,7 @@ export default function AboutPage() {
       <section className="space-y-8">
         <div className="space-y-6">
           <h2 className="text-lg font-medium">
-            Un passioné de sports de montagnes qui aime transmettre cette passion en images.
+            Un amoureux de sports de montagnes qui aime transmettre cette passion en images.
           </h2>
           <p className="max-w-prose text-sm leading-relaxed text-neutral-600">
             Aussi loin que je m'en souvienne, j'ai toujours eu un appareil photo entre les mains. Du Kodak jetable lors des premières 
