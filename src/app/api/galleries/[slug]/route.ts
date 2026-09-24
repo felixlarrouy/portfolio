@@ -14,12 +14,6 @@ type Context = {
   params: { slug: string } | Promise<{ slug: string }>;
 };
 
-function getRoots() {
-  const originalsRoot = path.join(process.cwd(), "public", "images");
-  const optimizedRoot = path.join(process.cwd(), "public", "images-optimized");
-  return { originalsRoot, optimizedRoot, hasOptimized: fs.existsSync(optimizedRoot) };
-}
-
 export async function GET(_req: Request, context: Context) {
   try {
     const { slug } = await Promise.resolve(context.params);
@@ -28,34 +22,23 @@ export async function GET(_req: Request, context: Context) {
       return NextResponse.json({ error: "Unknown gallery" }, { status: 404 });
     }
 
-    const { originalsRoot, optimizedRoot, hasOptimized } = getRoots();
-    const originalsDir = path.join(originalsRoot, "galleries", slug);
-    const optimizedDir = path.join(optimizedRoot, "galleries", slug);
+    const imagesRoot = path.join(process.cwd(), "public", "images");
+    const galleryDir = path.join(imagesRoot, "galleries", slug);
 
-    const files = await fs.promises.readdir(originalsDir);
+    const files = await fs.promises.readdir(galleryDir);
     const photos: Photo[] = [];
 
     for (const file of files) {
       const lower = file.toLowerCase();
       if (!lower.match(/\.(jpe?g|png|webp)$/)) continue;
 
-      const originalAbs = path.join(originalsDir, file);
-      const parsed = path.parse(file);
-      const optimizedAbs = path.join(optimizedDir, `${parsed.name}.webp`);
-      const useOptimized = hasOptimized && fs.existsSync(optimizedAbs);
-      const absPath = useOptimized ? optimizedAbs : originalAbs;
-
-      const fileBuffer = await fs.promises.readFile(absPath);
+      const fileBuffer = await fs.promises.readFile(path.join(galleryDir, file));
       const size = imageSize(fileBuffer);
 
       if (!size.width || !size.height) continue;
 
-      const src = useOptimized
-        ? `/images-optimized/galleries/${slug}/${parsed.name}.webp`
-        : `/images/galleries/${slug}/${file}`;
-
       photos.push({
-        src,
+        src: `/images/galleries/${slug}/${file}`,
         width: size.width,
         height: size.height,
       });

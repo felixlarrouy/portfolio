@@ -49,7 +49,7 @@ export function HomeGallery() {
       <div className="relative left-1/2 w-screen -translate-x-1/2 px-4 md:px-8">
         <MasonryPhotoAlbum
           photos={photos}
-          columns={(containerWidth) => (containerWidth < 768 ? 2 : 5)}
+          columns={(containerWidth) => (containerWidth < 768 ? 2 : 4)}
           padding={(containerWidth) => (containerWidth < 768 ? 3 : 5)}
           spacing={(containerWidth) => (containerWidth < 768 ? 10 : 25)}
           componentsProps={{
