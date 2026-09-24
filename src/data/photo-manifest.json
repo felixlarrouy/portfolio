@@ -1,0 +1,2288 @@
+{
+  "home": [
+    {
+      "src": "/images/home/10.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/11.webp",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/images/home/12.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/13.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/14.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/15.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/16.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/17-1.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/17.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/19.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/20.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/21.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/22.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/23.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/24.webp",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/images/home/25.webp",
+      "width": 1366,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/26.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/27.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/28.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/29.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/30.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/31.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/32.webp",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/images/home/33.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/34.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/35.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/36.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/37.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/38.webp",
+      "width": 1400,
+      "height": 1004
+    },
+    {
+      "src": "/images/home/39.webp",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/images/home/40.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/41.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/42.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/43.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/44.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/45.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/46.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/47.webp",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/images/home/48.webp",
+      "width": 1366,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/49.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/50.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/51.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/52.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/53.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/54.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/55.webp",
+      "width": 1400,
+      "height": 1120
+    },
+    {
+      "src": "/images/home/56.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/57.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/58.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/59.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/60.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/61.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/62.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/63.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/64.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/65.webp",
+      "width": 1400,
+      "height": 1050
+    },
+    {
+      "src": "/images/home/66.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/67.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/68.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/69.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/70.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/71.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/72.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/73.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/74.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/75.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/76.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/77.webp",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/images/home/78.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/79.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/80.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/81.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/82.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/83.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/84.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/85.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/86.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/87.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/88.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/89.webp",
+      "width": 1400,
+      "height": 1750
+    },
+    {
+      "src": "/images/home/90.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/91.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/92.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/93.webp",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/images/home/94.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/95.webp",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/images/home/96.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/97.webp",
+      "width": 1400,
+      "height": 934
+    },
+    {
+      "src": "/images/home/98.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/99.webp",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "src": "/images/home/991.webp",
+      "width": 1366,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/992.webp",
+      "width": 1400,
+      "height": 1750
+    },
+    {
+      "src": "/images/home/993.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/994.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/995.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/996.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/997.webp",
+      "width": 1365,
+      "height": 2048
+    },
+    {
+      "src": "/images/home/998.webp",
+      "width": 1365,
+      "height": 2048
+    }
+  ],
+  "biketrip": [
+    {
+      "src": "/images/galleries/biketrip/DSC00896.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC00940.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC00943.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC00995.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01021.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01022.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01097.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01144.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01156.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01213.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01228.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01238.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01253.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01257.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01326.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01346.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01498-2.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01531.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01682.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01690.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01700.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01723.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01730.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01795.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01797.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01800.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01808.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01834.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01841.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01851.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01858.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01860.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01894.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01895.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01901.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01958.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01967.webp",
+      "width": 2400,
+      "height": 3000
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01985.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01988.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01991.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC01999.webp",
+      "width": 2400,
+      "height": 3000
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC02006.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC02011.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC02017.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC02028.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC02033.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC02039.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC02047.webp",
+      "width": 2400,
+      "height": 3000
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC02048.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/biketrip/DSC02052.webp",
+      "width": 2400,
+      "height": 1600
+    }
+  ],
+  "clipmils": [
+    {
+      "src": "/images/galleries/clipmils/DSC_5550.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5553.webp",
+      "width": 2400,
+      "height": 3000
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5566.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5567.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5570.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5575.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5612.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5621.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5628.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5629.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5633.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5636.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5640.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5651.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5656.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5665.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5667.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5675.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5681.webp",
+      "width": 2400,
+      "height": 3000
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5684.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5697.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5711.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5727.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5728.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5739.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5751.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5766.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5783.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5785.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5789.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5795.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5810.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5812.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5815.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5820.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5821.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5828.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5833.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5836.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/clipmils/DSC_5850.webp",
+      "width": 2400,
+      "height": 3600
+    }
+  ],
+  "jo2024bike": [
+    {
+      "src": "/images/galleries/jo2024bike/IMG_4199.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/jo2024bike/IMG_4205.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/jo2024bike/IMG_4207.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/jo2024bike/IMG_4210-2.jpg",
+      "width": 1280,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/jo2024bike/IMG_4210.webp",
+      "width": 2400,
+      "height": 1600
+    }
+  ],
+  "jo2024climb": [
+    {
+      "src": "/images/galleries/jo2024climb/DSC_1270.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/jo2024climb/DSC_1309.webp",
+      "width": 2369,
+      "height": 3553
+    },
+    {
+      "src": "/images/galleries/jo2024climb/DSC_1458.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/jo2024climb/DSC_1471.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/jo2024climb/DSC_1474.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/jo2024climb/DSC_1503.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/jo2024climb/DSC_1518.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/jo2024climb/DSC_1654.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/jo2024climb/DSC_1700.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/jo2024climb/DSC_1748.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/jo2024climb/DSC_1822.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/jo2024climb/DSC_1825.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/jo2024climb/DSC_2011.webp",
+      "width": 2400,
+      "height": 2920
+    },
+    {
+      "src": "/images/galleries/jo2024climb/DSC_2207.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/jo2024climb/DSC_2296.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/jo2024climb/DSC_2398.webp",
+      "width": 2400,
+      "height": 1455
+    },
+    {
+      "src": "/images/galleries/jo2024climb/DSC_2405.webp",
+      "width": 1222,
+      "height": 1834
+    },
+    {
+      "src": "/images/galleries/jo2024climb/DSC_2537.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/jo2024climb/DSC_2724.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/jo2024climb/DSC_2806.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/jo2024climb/DSC_2862.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/jo2024climb/DSC_3101.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/jo2024climb/DSC_3143.webp",
+      "width": 2400,
+      "height": 3600
+    }
+  ],
+  "runandbreath": [
+    {
+      "src": "/images/galleries/runandbreath/DSC_4118.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runandbreath/DSC_4122.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runandbreath/DSC_4124.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runandbreath/DSC_4129.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runandbreath/DSC_4136.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runandbreath/DSC_4141.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runandbreath/DSC_4142.webp",
+      "width": 2400,
+      "height": 3000
+    },
+    {
+      "src": "/images/galleries/runandbreath/DSC_4145.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runandbreath/DSC_4147.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runandbreath/DSC_4163.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runandbreath/DSC_4165.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runandbreath/DSC_4212.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runandbreath/DSC_4216.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runandbreath/DSC_4220.webp",
+      "width": 2400,
+      "height": 3000
+    },
+    {
+      "src": "/images/galleries/runandbreath/DSC_4224.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runandbreath/DSC_4233.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runandbreath/DSC_4249.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runandbreath/DSC_4311.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runandbreath/DSC_4314.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runandbreath/DSC_4320.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runandbreath/DSC_4323.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runandbreath/DSC_4324.webp",
+      "width": 2400,
+      "height": 3600
+    }
+  ],
+  "runpuls17122025": [
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6377.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6381.webp",
+      "width": 1922,
+      "height": 2883
+    },
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6391.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6393.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6396.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6400.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6404.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6409.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6417.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6420.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6429.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6442.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6444.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6451.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6454.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6463.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6479.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6480.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6482.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6483.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6491.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6503.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6521.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6527.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6534.webp",
+      "width": 1763,
+      "height": 2644
+    },
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6556.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6566.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6607.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6616.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6620.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6635.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6642.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls17122025/DSC_6678.webp",
+      "width": 2400,
+      "height": 3600
+    }
+  ],
+  "runpuls30102025": [
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_4911.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_4912.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_4914.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_4923.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_4925.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_4929.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_4947.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_4966.webp",
+      "width": 1901,
+      "height": 2851
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_4980.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_4984.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_4985-2.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_4986.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_4989.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_4990.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_4993-2.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_4999.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5004.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5010.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5028.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5033.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5034.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5039-2.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5050.webp",
+      "width": 2345,
+      "height": 3518
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5052.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5053-2.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5067.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5073.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5076.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5080.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5082.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5101.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5107-2.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5128.webp",
+      "width": 2400,
+      "height": 3989
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5129.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5136.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5166.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5167.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5169-2.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5171.webp",
+      "width": 2173,
+      "height": 3260
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5178.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5188.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5203-2.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5222-2.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5244-2.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5246.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5251.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5256.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5290.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5294.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5295.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5307.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5311-2.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5316.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5317.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5318.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5344-2.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5352-2.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5392.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5430-2.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5451-2.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5456.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5464-2.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5486.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5488.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5491.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/runpuls30102025/DSC_5492.webp",
+      "width": 2400,
+      "height": 3600
+    }
+  ],
+  "testingnutritionyanaa": [
+    {
+      "src": "/images/galleries/testingnutritionyanaa/DSC_5014.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/testingnutritionyanaa/DSC_5015.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/testingnutritionyanaa/DSC_5016.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/testingnutritionyanaa/DSC_5020.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/testingnutritionyanaa/DSC_5046.webp",
+      "width": 2232,
+      "height": 3348
+    },
+    {
+      "src": "/images/galleries/testingnutritionyanaa/DSC_5047.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/testingnutritionyanaa/DSC_5062-2.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/testingnutritionyanaa/DSC_5083-2.webp",
+      "width": 2236,
+      "height": 3354
+    },
+    {
+      "src": "/images/galleries/testingnutritionyanaa/DSC_5085.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/testingnutritionyanaa/DSC_5087-2.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/testingnutritionyanaa/DSC_5102.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/testingnutritionyanaa/DSC_5104.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/testingnutritionyanaa/DSC_5123-2.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/testingnutritionyanaa/DSC_5124-2.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/testingnutritionyanaa/DSC_5126.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/testingnutritionyanaa/DSC_5436.webp",
+      "width": 2400,
+      "height": 3600
+    }
+  ],
+  "trailrunningawards2025": [
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_5997.webp",
+      "width": 2400,
+      "height": 3000
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_5998.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_5999.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6007.webp",
+      "width": 2400,
+      "height": 3000
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6013.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6016.webp",
+      "width": 2400,
+      "height": 3000
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6024.webp",
+      "width": 2400,
+      "height": 3000
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6052.webp",
+      "width": 2400,
+      "height": 1920
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6053.webp",
+      "width": 2400,
+      "height": 3000
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6064.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6072.webp",
+      "width": 1739,
+      "height": 2174
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6074.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6076.webp",
+      "width": 2400,
+      "height": 3000
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6079.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6085.webp",
+      "width": 2034,
+      "height": 2543
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6091.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6092.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6121.webp",
+      "width": 2400,
+      "height": 3000
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6135.webp",
+      "width": 2400,
+      "height": 3000
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6147.webp",
+      "width": 2400,
+      "height": 3000
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6152.webp",
+      "width": 2400,
+      "height": 3000
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6157.webp",
+      "width": 2400,
+      "height": 3000
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6169.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6188.webp",
+      "width": 2400,
+      "height": 3000
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6189.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6193.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6194.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6200.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6215.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6224.webp",
+      "width": 2400,
+      "height": 3000
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6237.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6241.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6246.webp",
+      "width": 2400,
+      "height": 3000
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6247.webp",
+      "width": 2400,
+      "height": 3000
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6260.webp",
+      "width": 2400,
+      "height": 3000
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6271.webp",
+      "width": 2400,
+      "height": 3000
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6283.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6297.webp",
+      "width": 2400,
+      "height": 3000
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6300.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6308.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6321.webp",
+      "width": 2400,
+      "height": 3000
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6334.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/trailrunningawards2025/DSC_6346.webp",
+      "width": 2400,
+      "height": 1350
+    }
+  ],
+  "winter2026": [
+    {
+      "src": "/images/galleries/winter2026/11. Ce que la montagne a à nous offrir.webp",
+      "width": 2000,
+      "height": 1333
+    },
+    {
+      "src": "/images/galleries/winter2026/5. Paysage méditatif.webp",
+      "width": 2000,
+      "height": 1333
+    },
+    {
+      "src": "/images/galleries/winter2026/6. Observer sans déranger.webp",
+      "width": 1333,
+      "height": 2000
+    },
+    {
+      "src": "/images/galleries/winter2026/8. Le goût de l'effort.webp",
+      "width": 1333,
+      "height": 2000
+    },
+    {
+      "src": "/images/galleries/winter2026/DSC00010.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/winter2026/DSC00018.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/winter2026/DSC00031.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/winter2026/DSC00037.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/winter2026/DSC00079.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/winter2026/DSC00140.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/winter2026/DSC00161.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/winter2026/DSC00179.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/winter2026/DSC00209.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/winter2026/DSC_6687.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/winter2026/DSC_6689.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/winter2026/DSC_6690.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/winter2026/DSC_6691jpg.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/winter2026/DSC_6692.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/winter2026/DSC_6693.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/winter2026/DSC_6695.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/winter2026/DSC_6716.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/winter2026/R0002522.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/winter2026/R0002530.webp",
+      "width": 2400,
+      "height": 1600
+    }
+  ],
+  "yoga06092025": [
+    {
+      "src": "/images/galleries/yoga06092025/DSC_4008.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/yoga06092025/DSC_4009.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/yoga06092025/DSC_4017.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/yoga06092025/DSC_4020.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/yoga06092025/DSC_4023.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/yoga06092025/DSC_4026.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/yoga06092025/DSC_4027.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/yoga06092025/DSC_4031.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/yoga06092025/DSC_4032.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/yoga06092025/DSC_4034.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/yoga06092025/DSC_4035.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/yoga06092025/DSC_4038.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/yoga06092025/DSC_4041.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/yoga06092025/DSC_4042.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/yoga06092025/DSC_4043.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/yoga06092025/DSC_4046.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/yoga06092025/DSC_4047.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/yoga06092025/DSC_4052.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/yoga06092025/DSC_4054.webp",
+      "width": 2400,
+      "height": 3600
+    }
+  ],
+  "yoga10102025": [
+    {
+      "src": "/images/galleries/yoga10102025/DSC_4389.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/yoga10102025/DSC_4392.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/yoga10102025/DSC_4400.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/yoga10102025/DSC_4403.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/yoga10102025/DSC_4408.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/yoga10102025/DSC_4409.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/yoga10102025/DSC_4411.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/yoga10102025/DSC_4416.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/yoga10102025/DSC_4424.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/yoga10102025/DSC_4431.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/yoga10102025/DSC_4437.webp",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/images/galleries/yoga10102025/DSC_4443.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/yoga10102025/DSC_4444.webp",
+      "width": 2400,
+      "height": 3600
+    },
+    {
+      "src": "/images/galleries/yoga10102025/DSC_4463.webp",
+      "width": 2400,
+      "height": 1600
+    }
+  ]
+}

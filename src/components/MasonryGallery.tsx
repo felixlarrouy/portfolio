@@ -9,6 +9,8 @@ import "yet-another-react-lightbox/styles.css";
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 
+import manifest from "@/data/photo-manifest.json";
+
 type Photo = {
   src: string;
   width: number;
@@ -16,25 +18,8 @@ type Photo = {
 };
 
 export function MasonryGallery({ slug }: { slug: string }) {
-  const [photos, setPhotos] = useState<Photo[]>([]);
   const [index, setIndex] = useState(-1);
-
-  useEffect(() => {
-    let isMounted = true;
-
-    fetch(`/api/galleries/${slug}`)
-      .then((res) => res.json())
-      .then((data: Photo[]) => {
-        if (isMounted) setPhotos(data);
-      })
-      .catch((error) => {
-        console.error(`Failed to load ${slug} photos`, error);
-      });
-
-    return () => {
-      isMounted = false;
-    };
-  }, [slug]);
+  const photos = (manifest[slug] ?? []) as Photo[];
 
   if (!photos.length) return null;
 

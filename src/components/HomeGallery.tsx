@@ -11,6 +11,8 @@ import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 
+import manifest from "@/data/photo-manifest.json";
+
 type Photo = {
   src: string;
   width: number;
@@ -18,27 +20,8 @@ type Photo = {
 };
 
 export function HomeGallery() {
-  const [photos, setPhotos] = useState<Photo[]>([]);
   const [index, setIndex] = useState(-1);
-
-  useEffect(() => {
-    let isMounted = true;
-
-    fetch("/api/home-photos")
-      .then((res) => res.json())
-      .then((data: Photo[]) => {
-        if (isMounted) {
-          setPhotos(data);
-        }
-      })
-      .catch((error) => {
-        console.error("Failed to load home photos", error);
-      });
-
-    return () => {
-      isMounted = false;
-    };
-  }, []);
+  const photos = (manifest.home ?? []) as Photo[];
 
   if (!photos.length) {
     return null;

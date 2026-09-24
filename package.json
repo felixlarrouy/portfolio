@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "optimize-images": "node scripts/optimize-images.mjs",
-    "embed-copyright": "node scripts/embed-copyright.mjs"
+    "generate-photo-manifest": "tsx scripts/generate-photo-manifest.ts"
   },
   "dependencies": {
     "image-size": "^2.0.2",
@@ -29,6 +29,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
+    "tsx": "^4.23.15",
     "typescript": "^5"
   }
 }
