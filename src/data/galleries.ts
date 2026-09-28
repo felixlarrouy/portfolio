@@ -12,6 +12,11 @@ export const galleries = {
         "les meilleurs grimpeurs du monde depuis les gradins.",
       heroSrc: "/images/galleries/jo2024climb/DSC_1654.webp",
     },
+    triathlonannecy2026: {
+      title: "Triathlon d'Annecy 2026",
+      intro: "Série photo réalisée lors du triathlon d'Annecy 2026, en tant que simple spectateur.",
+      heroSrc: "/images/galleries/triathlonannecy2026/DSC02251.webp",
+    },
     trailrunningawards2025: {
       title: "Trail Running Awards 2025",
       intro: 
