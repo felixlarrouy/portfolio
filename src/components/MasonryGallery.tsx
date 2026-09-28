@@ -1,6 +1,6 @@
 "use client";
 
-import { createElement, useState } from "react";
+import { createElement, useState, type SyntheticEvent } from "react";
 import { MasonryPhotoAlbum } from "react-photo-album";
 
 import Lightbox from "yet-another-react-lightbox";
@@ -10,6 +10,7 @@ import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 
 import manifest from "@/data/photo-manifest.json";
+import { getThumbnailSrc } from "@/lib/imagePaths";
 
 type Photo = {
   src: string;
@@ -23,6 +24,10 @@ export function MasonryGallery({ slug }: { slug: string }) {
     () => new Set(),
   );
   const photos = (manifest as Record<string, Photo[]>)[slug] ?? [];
+  const galleryPhotos = photos.map((photo) => ({
+    ...photo,
+    src: getThumbnailSrc(photo.src),
+  }));
 
   const markImageComplete = (photoIndex: number) => {
     setCompletedImages((completed) => {
@@ -39,7 +44,7 @@ export function MasonryGallery({ slug }: { slug: string }) {
     <>
       <div className="relative left-1/2 w-screen -translate-x-1/2 px-4 md:px-8">
         <MasonryPhotoAlbum
-          photos={photos}
+          photos={galleryPhotos}
           columns={(containerWidth) => (containerWidth < 768 ? 2 : 4)}
           padding={(containerWidth) => (containerWidth < 768 ? 3 : 5)}
           spacing={(containerWidth) => (containerWidth < 768 ? 10 : 25)}
@@ -62,7 +67,22 @@ export function MasonryGallery({ slug }: { slug: string }) {
                 loading: photoIndex < 10 ? "eager" : "lazy",
                 decoding: "async",
                 onLoad: () => markImageComplete(photoIndex),
-                onError: () => markImageComplete(photoIndex),
+                onError: (event: SyntheticEvent<HTMLImageElement>) => {
+                  markImageComplete(photoIndex);
+                  const fullResolutionSrc = photos[photoIndex]?.src;
+                  const fullResolutionUrl = fullResolutionSrc
+                    ? new URL(
+                        fullResolutionSrc,
+                        event.currentTarget.ownerDocument.baseURI,
+                      ).href
+                    : undefined;
+                  if (
+                    fullResolutionSrc &&
+                    event.currentTarget.src !== fullResolutionUrl
+                  ) {
+                    event.currentTarget.src = fullResolutionSrc;
+                  }
+                },
               });
             },
           }}

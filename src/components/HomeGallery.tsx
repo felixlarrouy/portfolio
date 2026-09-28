@@ -1,6 +1,6 @@
 "use client";
 
-import { createElement, useState } from "react";
+import { createElement, useState, type SyntheticEvent } from "react";
 import { MasonryPhotoAlbum } from "react-photo-album";
 
 import Lightbox from "yet-another-react-lightbox";
@@ -12,6 +12,7 @@ import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 
 import manifest from "@/data/photo-manifest.json";
+import { getThumbnailSrc } from "@/lib/imagePaths";
 
 type Photo = {
   src: string;
@@ -21,19 +22,11 @@ type Photo = {
 
 export function HomeGallery() {
   const [index, setIndex] = useState(-1);
-  const [completedImages, setCompletedImages] = useState<Set<number>>(
-    () => new Set(),
-  );
   const photos = (manifest.home ?? []) as Photo[];
-
-  const markImageComplete = (photoIndex: number) => {
-    setCompletedImages((completed) => {
-      if (completed.has(photoIndex)) return completed;
-      const next = new Set(completed);
-      next.add(photoIndex);
-      return next;
-    });
-  };
+  const galleryPhotos = photos.map((photo) => ({
+    ...photo,
+    src: getThumbnailSrc(photo.src),
+  }));
 
   if (!photos.length) {
     return null;
@@ -43,7 +36,7 @@ export function HomeGallery() {
     <>
       <div className="relative left-1/2 w-screen -translate-x-1/2 px-4 md:px-8">
         <MasonryPhotoAlbum
-          photos={photos}
+          photos={galleryPhotos}
           columns={(containerWidth) => (containerWidth < 768 ? 2 : 4)}
           padding={(containerWidth) => (containerWidth < 768 ? 3 : 5)}
           spacing={(containerWidth) => (containerWidth < 768 ? 10 : 25)}
@@ -52,21 +45,26 @@ export function HomeGallery() {
           }}
           render={{
             image: (props, { index: photoIndex }) => {
-              const firstTenLoaded = photos
-                .slice(0, 10)
-                .every((_, firstIndex) => completedImages.has(firstIndex));
-              const shouldLoad =
-                photoIndex < 10 ||
-                (firstTenLoaded &&
-                  (photoIndex === 10 || completedImages.has(photoIndex - 1)));
-
               return createElement("img", {
                 ...props,
-                src: shouldLoad ? props.src : undefined,
                 loading: photoIndex < 10 ? "eager" : "lazy",
+                fetchPriority: photoIndex === 0 ? "high" : "auto",
                 decoding: "async",
-                onLoad: () => markImageComplete(photoIndex),
-                onError: () => markImageComplete(photoIndex),
+                onError: (event: SyntheticEvent<HTMLImageElement>) => {
+                  const fullResolutionSrc = photos[photoIndex]?.src;
+                  const fullResolutionUrl = fullResolutionSrc
+                    ? new URL(
+                        fullResolutionSrc,
+                        event.currentTarget.ownerDocument.baseURI,
+                      ).href
+                    : undefined;
+                  if (
+                    fullResolutionSrc &&
+                    event.currentTarget.src !== fullResolutionUrl
+                  ) {
+                    event.currentTarget.src = fullResolutionSrc;
+                  }
+                },
               });
             },
           }}
