@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { createElement, useState } from "react";
 import { MasonryPhotoAlbum } from "react-photo-album";
 
 import Lightbox from "yet-another-react-lightbox";
@@ -21,7 +21,19 @@ type Photo = {
 
 export function HomeGallery() {
   const [index, setIndex] = useState(-1);
+  const [completedImages, setCompletedImages] = useState<Set<number>>(
+    () => new Set(),
+  );
   const photos = (manifest.home ?? []) as Photo[];
+
+  const markImageComplete = (photoIndex: number) => {
+    setCompletedImages((completed) => {
+      if (completed.has(photoIndex)) return completed;
+      const next = new Set(completed);
+      next.add(photoIndex);
+      return next;
+    });
+  };
 
   if (!photos.length) {
     return null;
@@ -37,6 +49,26 @@ export function HomeGallery() {
           spacing={(containerWidth) => (containerWidth < 768 ? 10 : 25)}
           componentsProps={{
             image: { className: "border-3 border-dark" },
+          }}
+          render={{
+            image: (props, { index: photoIndex }) => {
+              const firstTenLoaded = photos
+                .slice(0, 10)
+                .every((_, firstIndex) => completedImages.has(firstIndex));
+              const shouldLoad =
+                photoIndex < 10 ||
+                (firstTenLoaded &&
+                  (photoIndex === 10 || completedImages.has(photoIndex - 1)));
+
+              return createElement("img", {
+                ...props,
+                src: shouldLoad ? props.src : undefined,
+                loading: photoIndex < 10 ? "eager" : "lazy",
+                decoding: "async",
+                onLoad: () => markImageComplete(photoIndex),
+                onError: () => markImageComplete(photoIndex),
+              });
+            },
           }}
           onClick={({ index }) => setIndex(index)}
         />
