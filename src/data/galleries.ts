@@ -1,4 +1,9 @@
 export const galleries = {
+    perronsvallorcine : {
+      title: "Traversée des Perrons de Vallorcine — Course d'arête",
+      intro: "Série photo réalisée lors de la course d'arrête des Perrons de Vallorcine pour Cristina Pegacean, guide de haute montagne.",
+      heroSrc: "/images/galleries/perronsvallorcine/DSC02139.webp",
+    },
     jo2024climb: {
       title: "Épreuves d'escalade — JO de Paris 2024",
       intro: 
