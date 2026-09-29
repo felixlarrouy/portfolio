@@ -1,9 +1,7 @@
-import fs from "fs";
-import path from "path";
 import type { Metadata } from "next";
-import { imageSize } from "image-size";
 
 import { PrestationPage } from "@/components/PrestationPage";
+import manifest from "@/data/photo-manifest.json";
 
 export const metadata: Metadata = {
   title: "Photographe outdoor et montagne à Annecy | Reportage",
@@ -11,30 +9,10 @@ export const metadata: Metadata = {
     "Photographe outdoor basé en Haute-Savoie, spécialisé dans les reportages en montagne, aventure, randonnée, trail et sports outdoor. Annecy, Savoie et Alpes.",
 };
 
-const imageDirectory = path.join(
-  process.cwd(),
-  "public/images/prestations/reportage-outdoor"
-);
-
-const imageFiles = [
-  "photo1.webp",
-  "photo2.webp",
-  "photo3.webp",
-  "photo4.webp",
-];
-
-const photos = imageFiles.map((file) => {
-  const filePath = path.join(imageDirectory, file);
-  const buffer = fs.readFileSync(filePath);
-  const { width, height } = imageSize(buffer);
-
-  return {
-    src: `/images/prestations/reportage-outdoor/${file}`,
-    width,
-    height,
+const photos = manifest.prestations["reportage-outdoor"].map((photo) => ({
+    ...photo,
     alt: "Photographie outdoor en montagne",
-  };
-});
+  }));
 
 export default function Page() {
   return (

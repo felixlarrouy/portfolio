@@ -21,7 +21,6 @@
 
 import fs from "node:fs";
 import path from "node:path";
-import { execFileSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import sharp from "sharp";
 
@@ -220,15 +219,8 @@ async function main() {
 
   console.error(`Done. Skipped ${skipped} (already up-to-date).`);
 
-  if (dryRun || thumbnails) {
-    if (dryRun) {
-      console.error("Dry run: outputs were not written.");
-    }
-  } else {
-    execFileSync("npm", ["run", "generate-photo-manifest"], {
-      cwd: PROJECT_ROOT,
-      stdio: "inherit",
-    });
+  if (dryRun) {
+    console.error("Dry run: outputs were not written.");
   }
 }
 

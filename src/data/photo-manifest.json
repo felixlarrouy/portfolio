@@ -1837,6 +1837,218 @@
       ]
     }
   ],
+  "prestations": {
+    "communication-entreprise": [
+      {
+        "src": "/images/prestations/communication-entreprise/photo1.webp",
+        "width": 2400,
+        "height": 3600,
+        "srcSet": [
+          {
+            "src": "/images-thumbnails/prestations/communication-entreprise/photo1.webp",
+            "width": 640,
+            "height": 960
+          },
+          {
+            "src": "/images-thumbnails/prestations/communication-entreprise/photo1-1280.webp",
+            "width": 1280,
+            "height": 1920
+          }
+        ]
+      },
+      {
+        "src": "/images/prestations/communication-entreprise/photo2.webp",
+        "width": 2400,
+        "height": 1600,
+        "srcSet": [
+          {
+            "src": "/images-thumbnails/prestations/communication-entreprise/photo2.webp",
+            "width": 640,
+            "height": 427
+          },
+          {
+            "src": "/images-thumbnails/prestations/communication-entreprise/photo2-1280.webp",
+            "width": 1280,
+            "height": 853
+          }
+        ]
+      },
+      {
+        "src": "/images/prestations/communication-entreprise/photo3.webp",
+        "width": 2400,
+        "height": 3000,
+        "srcSet": [
+          {
+            "src": "/images-thumbnails/prestations/communication-entreprise/photo3.webp",
+            "width": 640,
+            "height": 800
+          },
+          {
+            "src": "/images-thumbnails/prestations/communication-entreprise/photo3-1280.webp",
+            "width": 1280,
+            "height": 1600
+          }
+        ]
+      },
+      {
+        "src": "/images/prestations/communication-entreprise/photo4.webp",
+        "width": 2400,
+        "height": 3600,
+        "srcSet": [
+          {
+            "src": "/images-thumbnails/prestations/communication-entreprise/photo4.webp",
+            "width": 640,
+            "height": 960
+          },
+          {
+            "src": "/images-thumbnails/prestations/communication-entreprise/photo4-1280.webp",
+            "width": 1280,
+            "height": 1920
+          }
+        ]
+      }
+    ],
+    "evenements-sportifs": [
+      {
+        "src": "/images/prestations/evenements-sportifs/photo1.webp",
+        "width": 2400,
+        "height": 3600,
+        "srcSet": [
+          {
+            "src": "/images-thumbnails/prestations/evenements-sportifs/photo1.webp",
+            "width": 640,
+            "height": 960
+          },
+          {
+            "src": "/images-thumbnails/prestations/evenements-sportifs/photo1-1280.webp",
+            "width": 1280,
+            "height": 1920
+          }
+        ]
+      },
+      {
+        "src": "/images/prestations/evenements-sportifs/photo2.webp",
+        "width": 2400,
+        "height": 1600,
+        "srcSet": [
+          {
+            "src": "/images-thumbnails/prestations/evenements-sportifs/photo2.webp",
+            "width": 640,
+            "height": 427
+          },
+          {
+            "src": "/images-thumbnails/prestations/evenements-sportifs/photo2-1280.webp",
+            "width": 1280,
+            "height": 853
+          }
+        ]
+      },
+      {
+        "src": "/images/prestations/evenements-sportifs/photo3.webp",
+        "width": 2400,
+        "height": 1600,
+        "srcSet": [
+          {
+            "src": "/images-thumbnails/prestations/evenements-sportifs/photo3.webp",
+            "width": 640,
+            "height": 427
+          },
+          {
+            "src": "/images-thumbnails/prestations/evenements-sportifs/photo3-1280.webp",
+            "width": 1280,
+            "height": 853
+          }
+        ]
+      },
+      {
+        "src": "/images/prestations/evenements-sportifs/photo4.webp",
+        "width": 2400,
+        "height": 3600,
+        "srcSet": [
+          {
+            "src": "/images-thumbnails/prestations/evenements-sportifs/photo4.webp",
+            "width": 640,
+            "height": 960
+          },
+          {
+            "src": "/images-thumbnails/prestations/evenements-sportifs/photo4-1280.webp",
+            "width": 1280,
+            "height": 1920
+          }
+        ]
+      }
+    ],
+    "reportage-outdoor": [
+      {
+        "src": "/images/prestations/reportage-outdoor/photo1.webp",
+        "width": 2400,
+        "height": 1600,
+        "srcSet": [
+          {
+            "src": "/images-thumbnails/prestations/reportage-outdoor/photo1.webp",
+            "width": 640,
+            "height": 427
+          },
+          {
+            "src": "/images-thumbnails/prestations/reportage-outdoor/photo1-1280.webp",
+            "width": 1280,
+            "height": 853
+          }
+        ]
+      },
+      {
+        "src": "/images/prestations/reportage-outdoor/photo2.webp",
+        "width": 1763,
+        "height": 2644,
+        "srcSet": [
+          {
+            "src": "/images-thumbnails/prestations/reportage-outdoor/photo2.webp",
+            "width": 640,
+            "height": 960
+          },
+          {
+            "src": "/images-thumbnails/prestations/reportage-outdoor/photo2-1280.webp",
+            "width": 1280,
+            "height": 1920
+          }
+        ]
+      },
+      {
+        "src": "/images/prestations/reportage-outdoor/photo3.webp",
+        "width": 2400,
+        "height": 3000,
+        "srcSet": [
+          {
+            "src": "/images-thumbnails/prestations/reportage-outdoor/photo3.webp",
+            "width": 640,
+            "height": 800
+          },
+          {
+            "src": "/images-thumbnails/prestations/reportage-outdoor/photo3-1280.webp",
+            "width": 1280,
+            "height": 1600
+          }
+        ]
+      },
+      {
+        "src": "/images/prestations/reportage-outdoor/photo4.webp",
+        "width": 2400,
+        "height": 1600,
+        "srcSet": [
+          {
+            "src": "/images-thumbnails/prestations/reportage-outdoor/photo4.webp",
+            "width": 640,
+            "height": 427
+          },
+          {
+            "src": "/images-thumbnails/prestations/reportage-outdoor/photo4-1280.webp",
+            "width": 1280,
+            "height": 853
+          }
+        ]
+      }
+    ]
+  },
   "biketrip": [
     {
       "src": "/images/galleries/biketrip/DSC00896.webp",

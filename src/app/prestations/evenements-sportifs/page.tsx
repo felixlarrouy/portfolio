@@ -1,7 +1,5 @@
-import fs from "fs";
-import path from "path";
-import { imageSize } from "image-size";
 import { PrestationPage } from "@/components/PrestationPage";
+import manifest from "@/data/photo-manifest.json";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,30 +8,10 @@ export const metadata: Metadata = {
     "Photographe sportif basé en Haute-Savoie, spécialisé dans les événements outdoor : trail, ultra-trail, cyclisme, VTT, ski et compétitions en montagne. Annecy, Savoie et Alpes.",
 };
 
-const imageDirectory = path.join(
-  process.cwd(),
-  "public/images/prestations/evenements-sportifs"
-);
-
-const imageFiles = [
-  "photo1.webp",
-  "photo2.webp",
-  "photo3.webp",
-  "photo4.webp",
-];
-
-const photos = imageFiles.map((file) => {
-    const filePath = path.join(imageDirectory, file);
-    const buffer = fs.readFileSync(filePath);
-    const { width, height } = imageSize(buffer);
-
-  return {
-    src: `/images/prestations/evenements-sportifs/${file}`,
-    width,
-    height,
+const photos = manifest.prestations["evenements-sportifs"].map((photo) => ({
+    ...photo,
     alt: "Photographie d'événement sportif",
-  };
-});
+  }));
 
 export default function EvenementsSportifsPage() {
   return (

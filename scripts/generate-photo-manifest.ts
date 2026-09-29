@@ -1,22 +1,13 @@
 import fs from "node:fs";
 import path from "node:path";
 import { imageSize } from "image-size";
+import { galleries } from "../src/data/galleries";
 
-const imagesRoot = path.join(
-  process.cwd(),
-  "public",
-  "images"
-);
-
-const outputDir = path.join(
-  process.cwd(),
-  "src/data"
-);
-
-const outputFile = path.join(
-  outputDir,
-  "photo-manifest.json"
-);
+const publicRoot = path.join(process.cwd(), "public");
+const imagesRoot = path.join(publicRoot, "images");
+const thumbnailsRoot = path.join(publicRoot, "images-thumbnails");
+const outputDir = path.join(process.cwd(), "src/data");
+const outputFile = path.join(outputDir, "photo-manifest.json");
 
 type Photo = {
   src: string;
@@ -25,28 +16,35 @@ type Photo = {
   srcSet: { src: string; width: number; height: number }[];
 };
 
-type Manifest = Record<string, Photo[]>;
+type Manifest = {
+  home: Photo[];
+  prestations: Record<string, Photo[]>;
+} & Record<string, Photo[] | Record<string, Photo[]>>;
+
+function listPhotoFiles(
+  directory: string,
+  isPhoto: (file: string) => boolean = (file) => /\.(jpe?g|png|webp)$/i.test(file),
+): string[] {
+  return fs.readdirSync(directory).filter(isPhoto).sort();
+}
 
 function getPhotos(
   directory: string,
   urlPrefix: string,
   thumbnailDirectory: string,
   thumbnailUrlPrefix: string,
+  isPhoto?: (file: string) => boolean,
 ): Photo[] {
-  const files = fs
-    .readdirSync(directory)
-    .filter((file) => /\.(jpe?g|png|webp)$/i.test(file))
-    .sort();
+  const files = listPhotoFiles(directory, isPhoto);
 
-  return files.flatMap((file) => {
+  return files.map((file) => {
     const filePath = path.join(directory, file);
     const buffer = fs.readFileSync(filePath);
 
     const { width, height } = imageSize(buffer);
 
     if (!width || !height) {
-      console.warn(`Skipping ${file}: dimensions not found`);
-      return [];
+      throw new Error(`Dimensions not found for image: ${path.relative(process.cwd(), filePath)}`);
     }
 
     const thumbnailName = `${path.parse(file).name}.webp`;
@@ -73,66 +71,114 @@ function getPhotos(
       };
     });
 
-    return [
-      {
-        src: `${urlPrefix}/${file}`,
-        width,
-        height,
-        srcSet: thumbnails,
-      },
-    ];
+    return {
+      src: `${urlPrefix}/${file}`,
+      width,
+      height,
+      srcSet: thumbnails,
+    };
   });
 }
 
 function generateManifest() {
-  const manifest: Manifest = {};
+  if (!fs.existsSync(imagesRoot) || !fs.statSync(imagesRoot).isDirectory()) {
+    throw new Error("Missing required image directory: public/images");
+  }
+
+  const manifest: Manifest = { home: [], prestations: {} };
 
   // Home
   const homeDir = path.join(imagesRoot, "home");
+  if (!fs.existsSync(homeDir) || !fs.statSync(homeDir).isDirectory()) {
+    throw new Error("Missing required image directory: public/images/home");
+  }
+  if (listPhotoFiles(homeDir).length === 0) {
+    throw new Error("No photos found in public/images/home");
+  }
+  manifest.home = getPhotos(
+    homeDir,
+    "/images/home",
+    path.join(thumbnailsRoot, "home"),
+    "/images-thumbnails/home",
+  );
 
-  if (fs.existsSync(homeDir)) {
-    manifest.home = getPhotos(
-      homeDir,
-      "/images/home",
-      path.join(process.cwd(), "public", "images-thumbnails", "home"),
-      "/images-thumbnails/home",
+  // Validate declared galleries before collecting any entries.
+  const galleriesDir = path.join(imagesRoot, "galleries");
+  for (const [slug, gallery] of Object.entries(galleries)) {
+    const galleryDir = path.join(galleriesDir, slug);
+    if (!fs.existsSync(galleryDir) || !fs.statSync(galleryDir).isDirectory()) {
+      throw new Error(`Missing directory for declared gallery "${slug}": ${path.relative(process.cwd(), galleryDir)}`);
+    }
+    if (listPhotoFiles(galleryDir).length === 0) {
+      throw new Error(`Declared gallery "${slug}" contains no photos`);
+    }
+
+    const heroPath = path.join(publicRoot, gallery.heroSrc.replace(/^\/+/, ""));
+    if (!fs.existsSync(heroPath) || !fs.statSync(heroPath).isFile()) {
+      throw new Error(`Hero image for gallery "${slug}" does not exist: ${gallery.heroSrc}`);
+    }
+  }
+
+  const galleryDirectories = fs
+    .readdirSync(galleriesDir, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory());
+
+  for (const gallery of galleryDirectories) {
+    const galleryDir = path.join(galleriesDir, gallery.name);
+
+    manifest[gallery.name] = getPhotos(
+      galleryDir,
+      `/images/galleries/${gallery.name}`,
+      path.join(thumbnailsRoot, "galleries", gallery.name),
+      `/images-thumbnails/galleries/${gallery.name}`,
     );
   }
 
-  // Galleries
-  const galleriesDir = path.join(imagesRoot, "galleries");
-
-  if (fs.existsSync(galleriesDir)) {
-    const galleries = fs
-      .readdirSync(galleriesDir, { withFileTypes: true })
+  // Prestations
+  const prestationsDir = path.join(imagesRoot, "prestations");
+  if (fs.existsSync(prestationsDir)) {
+    const prestationDirectories = fs
+      .readdirSync(prestationsDir, { withFileTypes: true })
       .filter((entry) => entry.isDirectory());
 
-    for (const gallery of galleries) {
-      const galleryDir = path.join(
-        galleriesDir,
-        gallery.name
+    for (const prestation of prestationDirectories) {
+      const prestationDir = path.join(prestationsDir, prestation.name);
+      const heroPath = path.join(prestationDir, "hero.webp");
+      const photoFiles = listPhotoFiles(
+        prestationDir,
+        (file) => file.toLowerCase().endsWith(".webp") && file !== "hero.webp",
       );
 
-      manifest[gallery.name] = getPhotos(
-        galleryDir,
-        `/images/galleries/${gallery.name}`,
-        path.join(process.cwd(), "public", "images-thumbnails", "galleries", gallery.name),
-        `/images-thumbnails/galleries/${gallery.name}`,
+      if (!fs.existsSync(heroPath) || !fs.statSync(heroPath).isFile()) {
+        throw new Error(`Missing required hero image: ${path.relative(process.cwd(), heroPath)}`);
+      }
+      if (photoFiles.length === 0) {
+        throw new Error(`No photos found in prestation directory: ${path.relative(process.cwd(), prestationDir)}`);
+      }
+
+      const photoFileSet = new Set(photoFiles);
+      manifest.prestations[prestation.name] = getPhotos(
+        prestationDir,
+        `/images/prestations/${prestation.name}`,
+        path.join(thumbnailsRoot, "prestations", prestation.name),
+        `/images-thumbnails/prestations/${prestation.name}`,
+        (file) => photoFileSet.has(file),
       );
     }
   }
 
   fs.mkdirSync(outputDir, { recursive: true });
+  const temporaryOutputFile = `${outputFile}.tmp`;
+  fs.writeFileSync(temporaryOutputFile, JSON.stringify(manifest, null, 2) + "\n", "utf8");
+  fs.renameSync(temporaryOutputFile, outputFile);
 
-  fs.writeFileSync(
-    outputFile,
-    JSON.stringify(manifest, null, 2) + "\n",
-    "utf8"
-  );
-
-  console.log(
-    `Generated photo manifest: ${outputFile}`
-  );
+  console.log(`Generated photo manifest: ${outputFile}`);
 }
 
-generateManifest();
+try {
+  generateManifest();
+} catch (error) {
+  const message = error instanceof Error ? error.message : String(error);
+  console.error(`Photo manifest generation failed: ${message}`);
+  process.exitCode = 1;
+}
