@@ -20,23 +20,11 @@ type Photo = {
 
 export function MasonryGallery({ slug }: { slug: string }) {
   const [index, setIndex] = useState(-1);
-  const [completedImages, setCompletedImages] = useState<Set<number>>(
-    () => new Set(),
-  );
   const photos = (manifest as Record<string, Photo[]>)[slug] ?? [];
   const galleryPhotos = photos.map((photo) => ({
     ...photo,
     src: getThumbnailSrc(photo.src),
   }));
-
-  const markImageComplete = (photoIndex: number) => {
-    setCompletedImages((completed) => {
-      if (completed.has(photoIndex)) return completed;
-      const next = new Set(completed);
-      next.add(photoIndex);
-      return next;
-    });
-  };
 
   if (!photos.length) return null;
 
@@ -53,22 +41,14 @@ export function MasonryGallery({ slug }: { slug: string }) {
           }}
           render={{
             image: (props, { index: photoIndex }) => {
-              const firstTenLoaded = photos
-                .slice(0, 10)
-                .every((_, firstIndex) => completedImages.has(firstIndex));
-              const shouldLoad =
-                photoIndex < 10 ||
-                (firstTenLoaded &&
-                  (photoIndex === 10 || completedImages.has(photoIndex - 1)));
-
               return createElement("img", {
                 ...props,
-                src: shouldLoad ? props.src : undefined,
+                src: props.src,
                 loading: photoIndex < 10 ? "eager" : "lazy",
                 decoding: "async",
-                onLoad: () => markImageComplete(photoIndex),
+                fetchPriority: photoIndex === 0 ? "high" : "auto",
                 onError: (event: SyntheticEvent<HTMLImageElement>) => {
-                  markImageComplete(photoIndex);
+                  console.warn("Vignette manquante :", event.currentTarget.src);
                   const fullResolutionSrc = photos[photoIndex]?.src;
                   const fullResolutionUrl = fullResolutionSrc
                     ? new URL(
