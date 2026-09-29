@@ -25,7 +25,7 @@ export function GalleryCard({ slug, title, heroSrc }: Props) {
           src={heroSrc}
           alt={title}
           fill
-          sizes="(min-width: 1024px) 30vw, (min-width: 768px) 45vw, 100vw"
+          sizes="(min-width: 1024px) 30vw, (min-width: 768px) 33vw, 50vw"
           className={`object-cover transition duration-300 ease-out ${
             hover ? "scale-105" : "scale-100"
           }`}

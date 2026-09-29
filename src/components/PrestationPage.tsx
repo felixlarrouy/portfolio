@@ -2,7 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { RowsPhotoAlbum } from "react-photo-album";
+import {
+  RenderImageContext,
+  RenderImageProps,
+  RowsPhotoAlbum,
+} from "react-photo-album";
 
 type PrestationPhoto = {
   src: string;
@@ -15,6 +19,27 @@ type ContentSection = {
   title: string;
   text: string;
 };
+
+function renderPrestationImage(
+  { alt = "", title }: RenderImageProps,
+  { photo, width, height }: RenderImageContext,
+) {
+  return (
+    <div
+      className="relative w-full overflow-hidden border-3 border-dark"
+      style={{ aspectRatio: `${width} / ${height}` }}
+    >
+      <Image
+        src={photo}
+        alt={alt}
+        title={title}
+        fill
+        sizes="(min-width: 768px) 50vw, 100vw"
+        className="object-cover"
+      />
+    </div>
+  );
+}
 
 type PrestationPageProps = {
   number: string;
@@ -103,8 +128,13 @@ export function PrestationPage({
           padding={(containerWidth) => (containerWidth < 768 ? 3 : 5)}
           spacing={(containerWidth) => (containerWidth < 768 ? 10 : 25)}
           rowConstraints={{ minPhotos: 2, maxPhotos: 2 }}
-          componentsProps={{
-            image: { className: "border-3 border-dark" },
+          render={{ image: renderPrestationImage }}
+          defaultContainerWidth={1104}
+          sizes={{
+            size: "1104px",
+            sizes: [
+              { viewport: "(max-width: 1136px)", size: "calc(100vw - 32px)" },
+            ],
           }}
         />
       </section>

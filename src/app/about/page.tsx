@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { socialLinks } from "@/data/socialLinks";
 
 export default function AboutPage() {
@@ -12,6 +11,7 @@ export default function AboutPage() {
             alt=""
             width={1400}
             height={900}
+            sizes="(min-width: 768px) 512px, 100vw"
             className="w-full object-cover"
             priority
           />
@@ -22,8 +22,8 @@ export default function AboutPage() {
             alt=""
             width={1400}
             height={900}
+            sizes="(min-width: 768px) 512px, 100vw"
             className="w-full object-cover"
-            priority
           />
           <p className="text-sm text-neutral-600">
             © Baptiste Gousset
