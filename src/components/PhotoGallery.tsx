@@ -2,6 +2,7 @@
 
 import { createElement, useState, type SyntheticEvent } from "react";
 import { MasonryPhotoAlbum } from "react-photo-album";
+import SSR from "react-photo-album/ssr";
 
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
@@ -24,43 +25,45 @@ export function PhotoGallery({ photos }: { photos: Photo[] }) {
   return (
     <>
       <div className="relative left-1/2 w-screen -translate-x-1/2 px-4 md:px-8">
-        <MasonryPhotoAlbum
-          photos={galleryPhotos}
-          columns={(containerWidth) => (containerWidth < 768 ? 2 : 4)}
-          padding={(containerWidth) => (containerWidth < 768 ? 3 : 5)}
-          spacing={(containerWidth) => (containerWidth < 768 ? 10 : 25)}
-          componentsProps={{
-            image: { className: "border-3 border-dark" },
-          }}
-          render={{
-            image: (props, { index: photoIndex }) => {
-              return createElement("img", {
-                ...props,
-                src: props.src,
-                loading: photoIndex < 10 ? "eager" : "lazy",
-                decoding: "async",
-                fetchPriority: photoIndex === 0 ? "high" : "auto",
-                onError: (event: SyntheticEvent<HTMLImageElement>) => {
-                  console.warn("Vignette manquante :", event.currentTarget.src);
-                  const fullResolutionSrc = photos[photoIndex]?.src;
-                  const fullResolutionUrl = fullResolutionSrc
-                    ? new URL(
-                        fullResolutionSrc,
-                        event.currentTarget.ownerDocument.baseURI,
-                      ).href
-                    : undefined;
-                  if (
-                    fullResolutionSrc &&
-                    event.currentTarget.src !== fullResolutionUrl
-                  ) {
-                    event.currentTarget.src = fullResolutionSrc;
-                  }
-                },
-              });
-            },
-          }}
-          onClick={({ index }) => setIndex(index)}
-        />
+        <SSR breakpoints={[360, 768, 1280]}>
+          <MasonryPhotoAlbum
+            photos={galleryPhotos}
+            columns={(containerWidth) => (containerWidth < 768 ? 2 : 4)}
+            padding={(containerWidth) => (containerWidth < 768 ? 3 : 5)}
+            spacing={(containerWidth) => (containerWidth < 768 ? 10 : 25)}
+            componentsProps={{
+              image: { className: "border-3 border-dark" },
+            }}
+            render={{
+              image: (props, { index: photoIndex }) => {
+                return createElement("img", {
+                  ...props,
+                  src: props.src,
+                  loading: photoIndex < 10 ? "eager" : "lazy",
+                  decoding: "async",
+                  fetchPriority: photoIndex === 0 ? "high" : "auto",
+                  onError: (event: SyntheticEvent<HTMLImageElement>) => {
+                    console.warn("Vignette manquante :", event.currentTarget.src);
+                    const fullResolutionSrc = photos[photoIndex]?.src;
+                    const fullResolutionUrl = fullResolutionSrc
+                      ? new URL(
+                          fullResolutionSrc,
+                          event.currentTarget.ownerDocument.baseURI,
+                        ).href
+                      : undefined;
+                    if (
+                      fullResolutionSrc &&
+                      event.currentTarget.src !== fullResolutionUrl
+                    ) {
+                      event.currentTarget.src = fullResolutionSrc;
+                    }
+                  },
+                });
+              },
+            }}
+            onClick={({ index }) => setIndex(index)}
+          />
+        </SSR>
       </div>
 
       <Lightbox
