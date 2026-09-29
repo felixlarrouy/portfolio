@@ -1,11 +1,10 @@
-"use client";
-
-import { HomeGallery } from "@/components/HomeGallery";
+import { PhotoGallery } from "@/components/PhotoGallery";
+import manifest from "@/data/photo-manifest.json";
 
 export default function Home() {
   return (
     <div id="top" className="space-y-8">
-      <HomeGallery />
+      <PhotoGallery photos={manifest.home} />
     </div>
   );
 }

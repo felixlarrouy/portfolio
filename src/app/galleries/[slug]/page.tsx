@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { galleries } from "@/data/galleries";
-import { MasonryGallery } from "@/components/MasonryGallery";
+import { PhotoGallery } from "@/components/PhotoGallery";
+import manifest from "@/data/photo-manifest.json";
 
 type PageProps = {
   params: Promise<{ slug: keyof typeof galleries }>;
@@ -32,6 +33,10 @@ export default async function GalleryPage({ params }: PageProps) {
   if (!gallery) {
     notFound();
   }
+
+  const photos = manifest[slug];
+
+  if (!photos?.length) notFound();
 
   return (
     <div className="min-w-0 space-y-10">
@@ -97,7 +102,7 @@ export default async function GalleryPage({ params }: PageProps) {
         </div>
       </header>
 
-    <MasonryGallery slug={slug} />
+      <PhotoGallery photos={photos} />
     </div>
   );
 }

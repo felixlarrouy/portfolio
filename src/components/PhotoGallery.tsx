@@ -6,31 +6,20 @@ import { MasonryPhotoAlbum } from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
-// import optional lightbox plugins
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
-import "yet-another-react-lightbox/plugins/thumbnails.css";
 
-import manifest from "@/data/photo-manifest.json";
 import { getThumbnailSrc } from "@/lib/imagePaths";
+import type { Photo } from "@/types/photo";
 
-type Photo = {
-  src: string;
-  width: number;
-  height: number;
-};
-
-export function HomeGallery() {
+export function PhotoGallery({ photos }: { photos: Photo[] }) {
   const [index, setIndex] = useState(-1);
-  const photos = (manifest.home ?? []) as Photo[];
   const galleryPhotos = photos.map((photo) => ({
     ...photo,
     src: getThumbnailSrc(photo.src),
   }));
 
-  if (!photos.length) {
-    return null;
-  }
+  if (!photos.length) return null;
 
   return (
     <>
@@ -47,10 +36,12 @@ export function HomeGallery() {
             image: (props, { index: photoIndex }) => {
               return createElement("img", {
                 ...props,
+                src: props.src,
                 loading: photoIndex < 10 ? "eager" : "lazy",
-                fetchPriority: photoIndex === 0 ? "high" : "auto",
                 decoding: "async",
+                fetchPriority: photoIndex === 0 ? "high" : "auto",
                 onError: (event: SyntheticEvent<HTMLImageElement>) => {
+                  console.warn("Vignette manquante :", event.currentTarget.src);
                   const fullResolutionSrc = photos[photoIndex]?.src;
                   const fullResolutionUrl = fullResolutionSrc
                     ? new URL(
@@ -82,4 +73,3 @@ export function HomeGallery() {
     </>
   );
 }
-
