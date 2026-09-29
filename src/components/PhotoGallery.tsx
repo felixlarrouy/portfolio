@@ -19,6 +19,14 @@ export function PhotoGallery({ photos }: { photos: Photo[] }) {
     ...photo,
     src: getThumbnailSrc(photo.src),
   }));
+  const lightboxPhotos = photos.map((photo) => ({
+    ...photo,
+    srcSet: photo.srcSet?.slice(1, 2).concat({
+      src: photo.src,
+      width: photo.width,
+      height: photo.height,
+    }),
+  }));
 
   if (!photos.length) return null;
 
@@ -28,6 +36,12 @@ export function PhotoGallery({ photos }: { photos: Photo[] }) {
         <SSR breakpoints={[360, 768, 1280]}>
           <MasonryPhotoAlbum
             photos={galleryPhotos}
+            sizes={{
+              size: "calc(100vw - 64px)",
+              sizes: [
+                { viewport: "(max-width: 767px)", size: "calc(100vw - 32px)" },
+              ],
+            }}
             columns={(containerWidth) => (containerWidth < 768 ? 2 : 4)}
             padding={(containerWidth) => (containerWidth < 768 ? 3 : 5)}
             spacing={(containerWidth) => (containerWidth < 768 ? 10 : 25)}
@@ -67,7 +81,7 @@ export function PhotoGallery({ photos }: { photos: Photo[] }) {
       </div>
 
       <Lightbox
-        slides={photos}
+        slides={lightboxPhotos}
         open={index >= 0}
         index={index}
         close={() => setIndex(-1)}

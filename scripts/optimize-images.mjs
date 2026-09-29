@@ -87,27 +87,41 @@ async function ensureDir(p) {
   await fs.promises.mkdir(path.dirname(p), { recursive: true });
 }
 
-async function optimizeOne(absIn, absOut, maxWidth, quality, dryRun, force) {
+async function optimizeOne(absIn, absOut, maxWidth, quality, dryRun, force, thumbnails) {
   const inStat = await fs.promises.stat(absIn);
   const outExists = fs.existsSync(absOut);
   const outStat = outExists ? await fs.promises.stat(absOut) : null;
+  let metadata;
+  let orientedDimensions;
 
   // Skip if output is newer or same mtime (basic incremental behavior).
   if (!force && outStat && outStat.mtimeMs >= inStat.mtimeMs) {
-    return { skipped: true };
+    if (!thumbnails) return { skipped: true };
+
+    metadata = await sharp(absIn, { failOn: "none" }).metadata();
+    orientedDimensions = metadata.autoOrient ?? {
+      width: metadata.width,
+      height: metadata.height,
+    };
+    const outputMetadata = await sharp(absOut, { failOn: "none" }).metadata();
+    const expectedWidth = Math.min(orientedDimensions.width ?? maxWidth, maxWidth);
+    if (outputMetadata.width === expectedWidth) return { skipped: true };
   }
 
   if (dryRun) return { skipped: false, dryRun: true };
 
-  await ensureDir(absOut);
-
-  const metadata = await sharp(absIn, { failOn: "none" }).metadata();
-  const orientedDimensions = metadata.autoOrient ?? {
+  metadata ??= await sharp(absIn, { failOn: "none" }).metadata();
+  orientedDimensions ??= metadata.autoOrient ?? {
     width: metadata.width,
     height: metadata.height,
   };
+
+  await ensureDir(absOut);
+
   const isPortrait = orientedDimensions.height > orientedDimensions.width;
-  const resizeWidth = isPortrait ? Math.round(maxWidth * (2 / 3)) : maxWidth;
+  const resizeWidth = !thumbnails && isPortrait
+    ? Math.round(maxWidth * (2 / 3))
+    : maxWidth;
 
   const pipeline = sharp(absIn, { failOn: "none" })
     .rotate() // respect EXIF orientation
@@ -162,7 +176,7 @@ async function main() {
     .sort();
 
   console.error(
-    `Found ${candidates.length} optimizable image(s) under ${path.relative(PROJECT_ROOT, imagesRoot)} (landscapeMaxWidth=${maxWidth}, portraitMaxWidth=${Math.round(maxWidth * (2 / 3))})`,
+    `Found ${candidates.length} optimizable image(s) under ${path.relative(PROJECT_ROOT, imagesRoot)} (landscapeMaxWidth=${maxWidth}, portraitMaxWidth=${thumbnails ? maxWidth : Math.round(maxWidth * (2 / 3))})`,
   );
 
   let done = 0;
@@ -171,14 +185,37 @@ async function main() {
   for (const absIn of candidates) {
     const absOut = outPathFor(absIn, imagesRoot, outputRoot);
     const relIn = path.relative(PROJECT_ROOT, absIn);
-    const relOut = path.relative(PROJECT_ROOT, absOut);
-    const r = await optimizeOne(absIn, absOut, maxWidth, quality, dryRun, force);
+    const outputs = thumbnails
+      ? [
+          { path: absOut, width: maxWidth },
+          {
+            path: path.join(
+              path.dirname(absOut),
+              `${path.parse(absOut).name}-1280.webp`,
+            ),
+            width: 1280,
+          },
+        ]
+      : [{ path: absOut, width: maxWidth }];
     done += 1;
-    if (r.skipped) {
-      skipped += 1;
-      continue;
+
+    for (const output of outputs) {
+      const relOut = path.relative(PROJECT_ROOT, output.path);
+      const result = await optimizeOne(
+        absIn,
+        output.path,
+        output.width,
+        quality,
+        dryRun,
+        force,
+        thumbnails,
+      );
+      if (result.skipped) {
+        skipped += 1;
+        continue;
+      }
+      process.stderr.write(`[${done}/${candidates.length}] ${relIn} → ${relOut}\n`);
     }
-    process.stderr.write(`[${done}/${candidates.length}] ${relIn} → ${relOut}\n`);
   }
 
   console.error(`Done. Skipped ${skipped} (already up-to-date).`);

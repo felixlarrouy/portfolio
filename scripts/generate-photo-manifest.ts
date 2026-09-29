@@ -22,11 +22,17 @@ type Photo = {
   src: string;
   width: number;
   height: number;
+  srcSet: { src: string; width: number; height: number }[];
 };
 
 type Manifest = Record<string, Photo[]>;
 
-function getPhotos(directory: string, urlPrefix: string): Photo[] {
+function getPhotos(
+  directory: string,
+  urlPrefix: string,
+  thumbnailDirectory: string,
+  thumbnailUrlPrefix: string,
+): Photo[] {
   const files = fs
     .readdirSync(directory)
     .filter((file) => /\.(jpe?g|png|webp)$/i.test(file))
@@ -43,11 +49,36 @@ function getPhotos(directory: string, urlPrefix: string): Photo[] {
       return [];
     }
 
+    const thumbnailName = `${path.parse(file).name}.webp`;
+    const thumbnail1280Name = `${path.parse(file).name}-1280.webp`;
+    const thumbnails = [thumbnailName, thumbnail1280Name].map((thumbnailFile) => {
+      const thumbnailPath = path.join(thumbnailDirectory, thumbnailFile);
+      if (!fs.existsSync(thumbnailPath)) {
+        throw new Error(
+          `Missing expected thumbnail: ${path.relative(process.cwd(), thumbnailPath)}`,
+        );
+      }
+
+      const thumbnailDimensions = imageSize(fs.readFileSync(thumbnailPath));
+      if (!thumbnailDimensions.width || !thumbnailDimensions.height) {
+        throw new Error(
+          `Could not read thumbnail dimensions: ${path.relative(process.cwd(), thumbnailPath)}`,
+        );
+      }
+
+      return {
+        src: `${thumbnailUrlPrefix}/${thumbnailFile}`,
+        width: thumbnailDimensions.width,
+        height: thumbnailDimensions.height,
+      };
+    });
+
     return [
       {
         src: `${urlPrefix}/${file}`,
         width,
         height,
+        srcSet: thumbnails,
       },
     ];
   });
@@ -62,7 +93,9 @@ function generateManifest() {
   if (fs.existsSync(homeDir)) {
     manifest.home = getPhotos(
       homeDir,
-      "/images/home"
+      "/images/home",
+      path.join(process.cwd(), "public", "images-thumbnails", "home"),
+      "/images-thumbnails/home",
     );
   }
 
@@ -82,7 +115,9 @@ function generateManifest() {
 
       manifest[gallery.name] = getPhotos(
         galleryDir,
-        `/images/galleries/${gallery.name}`
+        `/images/galleries/${gallery.name}`,
+        path.join(process.cwd(), "public", "images-thumbnails", "galleries", gallery.name),
+        `/images-thumbnails/galleries/${gallery.name}`,
       );
     }
   }
