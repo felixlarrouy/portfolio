@@ -1,6 +1,56 @@
 {
   "home": [
     {
+      "src": "/images/home/01.webp",
+      "width": 1333,
+      "height": 2000
+    },
+    {
+      "src": "/images/home/02.webp",
+      "width": 2000,
+      "height": 1333
+    },
+    {
+      "src": "/images/home/03.webp",
+      "width": 1333,
+      "height": 2000
+    },
+    {
+      "src": "/images/home/04.webp",
+      "width": 1333,
+      "height": 2000
+    },
+    {
+      "src": "/images/home/05.webp",
+      "width": 2000,
+      "height": 1333
+    },
+    {
+      "src": "/images/home/06.webp",
+      "width": 2000,
+      "height": 1333
+    },
+    {
+      "src": "/images/home/07.webp",
+      "width": 1333,
+      "height": 2000
+    },
+    {
+      "src": "/images/home/08.webp",
+      "width": 2000,
+      "height": 1333
+    },
+    {
+      "src": "/images/home/09.webp",
+      "width": 1333,
+      "height": 2000
+    },
+    {
+      "src": "/images/home/091.webp",
+      "width": 2000,
+      "height": 1333
+    },
+    {
       "src": "/images/home/10.webp",
       "width": 1333,
       "height": 1999
