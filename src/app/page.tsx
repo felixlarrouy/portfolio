@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import { PhotoGallery } from "@/components/PhotoGallery";
 import manifest from "@/data/photo-manifest.json";
+
+export const metadata: Metadata = {
+  title: "Accueil | Felix Larrouy Photographie",
+  description: "Photographe outdoor à Annecy.",
+};
 
 export default function Home() {
   return (

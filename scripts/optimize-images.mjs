@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Generates resized WebP versions from public/images-original into public/images.
+ * Generates resized WebP versions from images-original into public/images.
  * Use --thumbnails to generate smaller versions from public/images into
  * public/images-thumbnails.
  *
@@ -15,8 +15,8 @@
  *   npm run optimize-images -- --dry-run
  *
  * Notes:
- * - Output files are `.webp` and metadata is stripped.
- * - Only `.jpg/.jpeg/.png` inputs are processed (skip `.webp/.avif/.svg`).
+ * - Source metadata is removed; output files include only copyright and artist EXIF.
+ * - Processes `.jpg/.jpeg/.png` inputs; thumbnail mode also processes `.webp`.
  */
 
 import fs from "node:fs";
@@ -129,7 +129,7 @@ async function optimizeOne(absIn, absOut, maxWidth, quality, dryRun, force, thum
       withoutEnlargement: true,
       fit: "inside",
     })
-    .withMetadata({ orientation: undefined }) // strip EXIF orientation
+    .withExif({ IFD0: { Copyright: "© Félix Larrouy", Artist: "Félix Larrouy" } })
     .webp({
       quality,
       effort: 6,
@@ -145,11 +145,9 @@ async function main() {
     process.argv.slice(2),
   );
 
-  const imagesRootBase = path.join(
-    PROJECT_ROOT,
-    "public",
-    thumbnails ? "images" : "images-original",
-  );
+  const imagesRootBase = thumbnails
+    ? path.join(PROJECT_ROOT, "public", "images")
+    : path.join(PROJECT_ROOT, "images-original");
   const outputRootBase = path.join(
     PROJECT_ROOT,
     "public",
@@ -159,8 +157,8 @@ async function main() {
   const inputRelativePath = path.relative(imagesRootBase, imagesRoot);
 
   if (inputRelativePath.startsWith("..") || path.isAbsolute(inputRelativePath)) {
-    const sourceDirectory = thumbnails ? "images" : "images-original";
-    throw new Error(`--input-dir must be a path inside public/${sourceDirectory}`);
+    const sourceDirectory = thumbnails ? "public/images" : "images-original";
+    throw new Error(`--input-dir must be a path inside ${sourceDirectory}`);
   }
 
   if (!fs.existsSync(imagesRoot)) {

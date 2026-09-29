@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Prestations photo | Felix Larrouy Photographie",
+  description: "Reportages photo pour événements sportifs, activités outdoor et communication d'entreprise autour d'Annecy.",
+};
 
 const prestations = [
   {
@@ -48,7 +54,7 @@ export default function PrestationsPage() {
             href={prestation.href}
             className="group block"
           >
-            <div className="relative aspect-[4/5] overflow-hidden border-3 border-dark bg-neutral-100">
+            <div className="relative aspect-[4/5] overflow-hidden border-3 border-black bg-neutral-100">
               <Image
                 src={prestation.image}
                 alt={prestation.title}

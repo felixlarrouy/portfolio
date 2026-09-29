@@ -11,6 +11,10 @@ import { socialLinks } from "@/data/socialLinks";
 export const metadata: Metadata = {
   title: "Felix Larrouy Photographie",
   description: "Photographe outdoor et aventure autour d'Annecy.",
+  metadataBase: new URL("https://www.felixlarrouy-photographie.com"),
+  openGraph: {
+    images: ["/images/galleries/perronsvallorcine/DSC02139.webp"],
+  },
 };
 
 export const viewport: Viewport = {
@@ -24,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <body className="bg-white text-black antialiased">
         <ImageContextMenuGuard />
 

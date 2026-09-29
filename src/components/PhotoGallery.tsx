@@ -1,17 +1,34 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { createElement, useState, type SyntheticEvent } from "react";
+import type { ComponentProps } from "react";
 import { MasonryPhotoAlbum } from "react-photo-album";
 import SSR from "react-photo-album/ssr";
 
-import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
-
-import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
-import Zoom from "yet-another-react-lightbox/plugins/zoom";
 
 import { getThumbnailSrc } from "@/lib/imagePaths";
 import type { Photo } from "@/types/photo";
+
+const Lightbox = dynamic(
+  async () => {
+    const [lightboxModule, { default: Fullscreen }, { default: Zoom }] =
+      await Promise.all([
+        import("yet-another-react-lightbox"),
+        import("yet-another-react-lightbox/plugins/fullscreen"),
+        import("yet-another-react-lightbox/plugins/zoom"),
+      ]);
+    const LightboxComponent = lightboxModule.default;
+
+    return function LazyLightbox(
+      props: ComponentProps<typeof LightboxComponent>,
+    ) {
+      return <LightboxComponent {...props} plugins={[Fullscreen, Zoom]} />;
+    };
+  },
+  { ssr: false },
+);
 
 export function PhotoGallery({ photos }: { photos: Photo[] }) {
   const [index, setIndex] = useState(-1);
@@ -46,7 +63,7 @@ export function PhotoGallery({ photos }: { photos: Photo[] }) {
             padding={(containerWidth) => (containerWidth < 768 ? 3 : 5)}
             spacing={(containerWidth) => (containerWidth < 768 ? 10 : 25)}
             componentsProps={{
-              image: { className: "border-3 border-dark" },
+              image: { className: "border-3 border-black" },
             }}
             render={{
               image: (props, { index: photoIndex }) => {
@@ -80,13 +97,14 @@ export function PhotoGallery({ photos }: { photos: Photo[] }) {
         </SSR>
       </div>
 
-      <Lightbox
-        slides={lightboxPhotos}
-        open={index >= 0}
-        index={index}
-        close={() => setIndex(-1)}
-        plugins={[Fullscreen, Zoom]}
-      />
+      {index >= 0 && (
+        <Lightbox
+          slides={lightboxPhotos}
+          open
+          index={index}
+          close={() => setIndex(-1)}
+        />
+      )}
     </>
   );
 }

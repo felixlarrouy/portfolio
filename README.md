@@ -13,10 +13,10 @@ npm run dev
 Les trois dossiers d'images sont locaux et hors Git :
 
 ```text
-public/images-original/ -> public/images/ -> public/images-thumbnails/
+images-original/ -> public/images/ -> public/images-thumbnails/
 ```
 
-Pour ajouter une galerie : déposer les originaux dans `public/images-original/galleries/<slug>/`, ajouter son entrée dans `src/data/galleries.ts`, puis lancer `npm run photos` et `npm run build`. Commiter ensuite `src/data/photo-manifest.json`.
+Pour ajouter une galerie : déposer les originaux dans `images-original/galleries/<slug>/`, ajouter son entrée dans `src/data/galleries.ts`, puis lancer `npm run photos` et `npm run build`. Commiter ensuite `src/data/photo-manifest.json`.
 
 ## Mise en ligne
 

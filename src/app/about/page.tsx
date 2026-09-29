@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { socialLinks } from "@/data/socialLinks";
+
+export const metadata: Metadata = {
+  title: "À propos | Felix Larrouy Photographie",
+  description: "Photographe outdoor à Annecy, passionné de montagne, de sport et de photographie outdoor.",
+};
 
 export default function AboutPage() {
   return (

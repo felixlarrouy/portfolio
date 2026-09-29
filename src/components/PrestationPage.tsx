@@ -26,7 +26,7 @@ function renderPrestationImage(
 ) {
   return (
     <div
-      className="relative w-full overflow-hidden border-3 border-dark"
+      className="relative w-full overflow-hidden border-3 border-black"
       style={{ aspectRatio: `${width} / ${height}` }}
     >
       <Image
@@ -102,7 +102,7 @@ export function PrestationPage({
 
         </div>
 
-        <div className="relative aspect-[2/3] overflow-hidden border-3 border-dark bg-neutral-100 md:self-start">
+        <div className="relative aspect-[2/3] overflow-hidden border-3 border-black bg-neutral-100 md:self-start">
           <Image
             src={heroImage.src}
             alt={heroImage.alt}

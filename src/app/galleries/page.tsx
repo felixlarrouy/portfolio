@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import { GalleryCard } from "@/components/GalleryCard";
 import { galleries } from "@/data/galleries";
+
+export const metadata: Metadata = {
+  title: "Galeries photo | Felix Larrouy Photographie",
+  description: "Reportages photo de sport, montagne, événements et aventures autour d'Annecy.",
+};
 
 export default function GalleriesPage() {
   return (
