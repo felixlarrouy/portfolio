@@ -2,10 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 import { socialLinks } from "@/data/socialLinks";
 
 export function HeaderNav() {
   const pathname = usePathname();
+  const [isPrestationsMenuOpen, setIsPrestationsMenuOpen] = useState(false);
 
   const isGalleries = pathname === "/galleries";
   const isPrestations = pathname === "/prestations" || pathname.startsWith("/prestations/");
@@ -21,7 +23,17 @@ export function HeaderNav() {
         Galeries photos
       </Link>
 
-      <div className="group relative">
+      <div
+        className="group relative"
+        onMouseEnter={() => setIsPrestationsMenuOpen(true)}
+        onMouseLeave={() => setIsPrestationsMenuOpen(false)}
+        onFocus={() => setIsPrestationsMenuOpen(true)}
+        onBlur={(event) => {
+          if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+            setIsPrestationsMenuOpen(false);
+          }
+        }}
+      >
         <Link
           href="/prestations"
           aria-current={isPrestations ? "page" : undefined}
@@ -36,10 +48,15 @@ export function HeaderNav() {
           </span>
         </Link>
 
-        <div className="invisible absolute top-full right-0 z-50 w-max pt-1 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+        <div
+          className={`absolute top-full right-0 z-50 w-max pt-1 transition-all duration-200 ${
+            isPrestationsMenuOpen ? "visible opacity-100" : "invisible opacity-0"
+          }`}
+        >
           <div className="bg-white">
             <Link
               href="/prestations/evenements-sportifs"
+              onClick={() => setIsPrestationsMenuOpen(false)}
               aria-current={pathname === "/prestations/evenements-sportifs" ? "page" : undefined}
               className={`block whitespace-nowrap px-2 py-1.5 text-right ${
                 pathname === "/prestations/evenements-sportifs" ? "underline decoration-1 underline-offset-4" : ""
@@ -50,6 +67,7 @@ export function HeaderNav() {
 
             <Link
               href="/prestations/reportage-outdoor"
+              onClick={() => setIsPrestationsMenuOpen(false)}
               aria-current={pathname === "/prestations/reportage-outdoor" ? "page" : undefined}
               className={`block whitespace-nowrap px-2 py-1.5 text-right ${
                 pathname === "/prestations/reportage-outdoor" ? "underline decoration-1 underline-offset-4" : ""
@@ -60,6 +78,7 @@ export function HeaderNav() {
 
             <Link
               href="/prestations/communication-entreprise"
+              onClick={() => setIsPrestationsMenuOpen(false)}
               aria-current={pathname === "/prestations/communication-entreprise" ? "page" : undefined}
               className={`block whitespace-nowrap px-2 py-1.5 text-right ${
                 pathname === "/prestations/communication-entreprise" ? "underline decoration-1 underline-offset-4" : ""

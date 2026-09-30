@@ -4,7 +4,7 @@ import { PrestationPage } from "@/components/PrestationPage";
 import manifest from "@/data/photo-manifest.json";
 
 export const metadata: Metadata = {
-  title: "Photographe outdoor et montagne à Annecy | Reportage",
+  title: "Photographe sportif à Annecy | Événements & outdoor",
   description:
     "Photographe outdoor basé en Haute-Savoie, spécialisé dans les reportages en montagne, aventure, randonnée, trail et sports outdoor. Annecy, Savoie et Alpes.",
 };

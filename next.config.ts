@@ -1,8 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  images: {
+    unoptimized: process.env.NODE_ENV === "development",
+  },
   async headers() {
-    const cacheControl = "public, max-age=31536000, immutable";
+    const cacheControl = process.env.NODE_ENV === "development"
+      ? "no-store"
+      : "public, max-age=31536000, immutable";
 
     return [
       {
