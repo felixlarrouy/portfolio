@@ -53,7 +53,7 @@ export default function AboutPage() {
             qui me correspond le mieux et me permet de m'épanouir tant personnellement que professionnellement.
           </p>
           <p className="max-w-prose text-sm leading-relaxed text-neutral-600">
-            Je suis néanmoins ouvert à des propositions autres que liées au milieu du sport, n'hésitez pas à me contacter pour plus d'informations.
+            Je suis néanmoins ouvert à des propositions autres que liées au milieu du sport, n'hésitez pas à me contacter pour échanger sur vos projets.
           </p>
         </div>
 

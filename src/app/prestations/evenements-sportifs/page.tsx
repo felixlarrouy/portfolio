@@ -18,7 +18,7 @@ export default function EvenementsSportifsPage() {
     <PrestationPage
       number="01"
       title="Événements sportifs"
-      intro="Je réalise des reportages photo pour des événements de trail, cyclisme (route, gravel, VTT), escalade, ski et autres compétitions outdoor. Basé en Haute-Savoie, j'accompagne les organisateurs, clubs et structures sportives à Annecy, en Savoie et plus largement dans les Alpes."
+      intro="Je réalise des captations photo pour des événements de trail, cyclisme (route, gravel, VTT), escalade, ski et autres compétitions outdoor."
       description="De l'action aux émotions des participants, je cherche à retranscrire l'intensité de la compétition et l'environnement dans lequel se déroule votre événement."
       heroImage={{
         src: "/images/prestations/evenements-sportifs/hero.webp",
@@ -28,11 +28,11 @@ export default function EvenementsSportifsPage() {
       contentSections={[
         {
           title: "Un reportage photo au service de votre événement",
-          text: "Je capture des images permettant de retranscrire l'intensité de la compétition, l'engagement des participants et l'atmosphère qui l'entoure. Je couvre les différents temps forts de votre événement afin de créer une série d'images cohérente et directement exploitable pour votre communication : site internet, réseaux sociaux, affiches, ou promotion des prochaines éditions.",
+          text: "Je couvre les différents temps forts de votre événement afin de créer une série d'images cohérente et directement exploitable pour votre communication : site internet, réseaux sociaux, affiches, ou promotion des prochaines éditions.",
         },
         {
           title: "Photographe sportif en Haute-Savoie et dans les Alpes",
-          text: "Basé à d'Annecy, j'interviens principalement en Haute-Savoie, en Savoie et dans les Alpes. Je peux également me déplacer pour couvrir des événements sportifs partout en France selon les projets.",
+          text: "Basé à d'Annecy, j'interviens principalement en Haute-Savoie, en Savoie et dans les Alpes. Je peux également me déplacer pour couvrir des événements sportifs ailleurs en France ou dans le monde selon votre projet.",
         },
       ]}
       contactTitle="Vous organisez un événement sportif ?"

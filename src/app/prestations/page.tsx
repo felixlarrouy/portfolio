@@ -12,7 +12,7 @@ const prestations = [
     number: "01",
     title: "Événements sportifs",
     description:
-      "Trail, cyclisme, ski, outdoor et autres événements sportifs. Des images dynamiques et naturelles pour documenter l’événement et mettre en valeur les participants.",
+      "Couverture photo de compétitions de trail, cyclisme, triathlon, ski, et autres événements sportifs. Je produits des images dynamiques et naturelles pour documenter l’événement et mettre en valeur l'organisation et les participants.",
     image: "/images/prestations/evenements-sportifs/hero.webp",
     href: "/prestations/evenements-sportifs",
   },
@@ -20,7 +20,7 @@ const prestations = [
     number: "02",
     title: "Reportage outdoor",
     description:
-      "Randonnée, montagne, aventure et activités de plein air. Des images qui retranscrivent l’ambiance, les paysages et l’expérience vécue sur le terrain.",
+      "Des photos au coeur de votre social run/ride, de votre expédition (alpinisme, ski de rando...), ou tout autre événement méritant d'être documenté avec des images qui retranscrivent l'ambiance, les paysages, et l'expérience vécue sur le terrain.",
     image: "/images/prestations/reportage-outdoor/hero.webp",
     href: "/prestations/reportage-outdoor",
   },
@@ -28,7 +28,7 @@ const prestations = [
     number: "03",
     title: "Communication & entreprise",
     description:
-      "Photographies destinées à votre site internet, vos réseaux sociaux ou vos supports de communication, adaptées à votre activité et à votre image.",
+      "Shooting des produits de votre marque en conditions réelles, mise en avant de vos services d'entreprise, je vous livre des photos destinées à votre communication sur votre site internet et vos réseaux sociaux, adaptées à votre activité et votre image.",
     image: "/images/prestations/communication-entreprise/hero.webp",
     href: "/prestations/communication-entreprise",
   },

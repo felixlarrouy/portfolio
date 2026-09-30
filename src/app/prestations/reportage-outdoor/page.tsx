@@ -19,8 +19,8 @@ export default function Page() {
     <PrestationPage
       number="02"
       title="Reportage outdoor"
-      intro="Je réalise des reportages photo en montagne et en pleine nature pour raconter des aventures, des expéditions, des pratiques sportives et des projets outdoor. J'aime y retranscire l'action, l'environnement mais aussi les moments de vie."
-      description="Trail, randonnée, alpinisme, ski, vélo ou aventure : je m'adapte aux contraintes du terrain pour créer des images immersives qui retranscrivent l'expérience vécue."
+      intro="Je réalise des reportages photo en montagne et en pleine nature pour raconter des aventures, des expéditions, des pratiques sportives et des projets outdoor. J'aime y retranscire l'action, l'environnement mais aussi les moments de vie avec la passion qui me caractérise."
+      description="Je m'adapte aux contraintes du terrain pour créer des images immersives qui retranscrivent l'expérience vécue."
       heroImage={{
         src: "/images/prestations/reportage-outdoor/hero.webp",
         alt: "Reportage photographique outdoor en montagne",
@@ -28,16 +28,12 @@ export default function Page() {
       photos={photos}
       contentSections={[
         {
-          title: "Raconter une aventure en images",
-          text: "Un reportage outdoor permet de raconter bien plus qu'une activité sportive. L'objectif est de retranscrire une expérience, un itinéraire, une ambiance et un environnement. Je cherche à construire une série d'images cohérente, mêlant scènes d'action, portraits, détails et paysages.",
-        },
-        {
           title: "Être au coeur de votre événement ou de votre projet",
-          text: "Je réalise des reportages autour du trail, de la randonnée, du vélo, du ski, de l'alpinisme et plus largement des activités de pleine nature, avec pour but d'être au plus proche de l'action et de l'expérience vécue. Mon expérience sportive me permet de suivre les participants et de m'adapter aux contraintes du terrain pour créer des images immersives et naturelles.",
+          text: "Mon expérience sportive me permet de suivre les participants et de m'adapter aux contraintes du terrain pour créer des images immersives et naturelles, avec pour but d'être au plus proche de l'action.",
         },
       ]}
       contactTitle="Vous avez un projet outdoor ?"
-      contactText="Vous souhaitez raconter une aventure, mettre en valeur une activité ou créer des images pour un projet en montagne ? Contactez-moi pour échanger sur vos besoins."
+      contactText="Vous souhaitez raconter une aventure, mettre en valeur une activité ou créer des images pour un projet en montagne ? Contactez-moi pour échanger sur votre projet."
     />
   );
 }

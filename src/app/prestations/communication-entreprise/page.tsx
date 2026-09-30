@@ -19,8 +19,8 @@ export default function Page() {
     <PrestationPage
       number="03"
       title="Communication & entreprise"
-      intro="Je crée des images pour les entreprises, marques et professionnels qui souhaitent développer une communication visuelle cohérente et authentique."
-      description="Portraits, reportages, savoir-faire, locaux, produits ou contenus destinés aux réseaux sociaux : je construis des séries d'images adaptées à votre identité et à vos besoins de communication."
+      intro="Je crée des images pour les entreprises, les marques et les professionnels qui souhaitent mettre en avant des produits (vêtements techniques, matériel de sport...), des savoir-faire ou encore des services."
+      description=""
       heroImage={{
         src: "/images/prestations/communication-entreprise/hero.webp",
         alt: "Photographie professionnelle pour une entreprise",
@@ -29,11 +29,7 @@ export default function Page() {
       contentSections={[
         {
           title: "Des photographies au service de votre communication",
-          text: "Une image professionnelle permet de mettre en valeur un savoir-faire et de créer une identité visuelle cohérente. Je réalise des reportages photographiques pensés pour s'intégrer naturellement à vos différents supports de communication.",
-        },
-        {
-          title: "Du contenu pour vos différents supports",
-          text: "Les images peuvent être utilisées pour votre site internet, vos réseaux sociaux, vos supports commerciaux, vos dossiers de presse ou vos campagnes de communication. Je peux également produire des séries d'images pensées spécifiquement pour alimenter votre communication dans la durée.",
+          text: "Une image professionnelle permet de créer une identité visuelle cohérente. Je réalise des photos pensées pour s'intégrer naturellement à vos différents supports de communication (site internet, réseaux sociaux, vos supports commerciaux, vos dossiers de presse ou vos campagnes de communication).",
         },
       ]}
       contactTitle="Un projet de communication ?"

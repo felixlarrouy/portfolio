@@ -2,11 +2,35 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+import { useState } from "react";
+import type { ComponentProps } from "react";
 import {
   RenderImageContext,
   RenderImageProps,
   RowsPhotoAlbum,
 } from "react-photo-album";
+
+import "yet-another-react-lightbox/styles.css";
+
+const Lightbox = dynamic(
+  async () => {
+    const [lightboxModule, { default: Fullscreen }, { default: Zoom }] =
+      await Promise.all([
+        import("yet-another-react-lightbox"),
+        import("yet-another-react-lightbox/plugins/fullscreen"),
+        import("yet-another-react-lightbox/plugins/zoom"),
+      ]);
+    const LightboxComponent = lightboxModule.default;
+
+    return function LazyLightbox(
+      props: ComponentProps<typeof LightboxComponent>,
+    ) {
+      return <LightboxComponent {...props} plugins={[Fullscreen, Zoom]} />;
+    };
+  },
+  { ssr: false },
+);
 
 type PrestationPhoto = {
   src: string;
@@ -67,6 +91,8 @@ export function PrestationPage({
   contactTitle,
   contactText,
 }: PrestationPageProps) {
+  const [lightboxIndex, setLightboxIndex] = useState(-1);
+
   return (
     <div className="space-y-8">
       {/* Hero */}
@@ -81,7 +107,7 @@ export function PrestationPage({
           <p className="mt-6 leading-7 text-neutral-600">
             {intro}
           </p>
-          <p className="mt-4 leading-7 text-neutral-600">
+          <p className="mt-2 leading-7 text-neutral-600">
             {description}
           </p>
 
@@ -102,7 +128,7 @@ export function PrestationPage({
 
         </div>
 
-        <div className="relative aspect-[2/3] overflow-hidden border-3 border-black bg-neutral-100 md:self-start">
+        <div className="relative aspect-[4/5] overflow-hidden border-3 border-black bg-neutral-100 md:self-start">
           <Image
             src={heroImage.src}
             alt={heroImage.alt}
@@ -121,7 +147,7 @@ export function PrestationPage({
             Quelques images
           </h2>
         </div>
-
+        
         <RowsPhotoAlbum
           photos={photos}
           targetRowHeight={320}
@@ -129,6 +155,7 @@ export function PrestationPage({
           spacing={(containerWidth) => (containerWidth < 768 ? 10 : 25)}
           rowConstraints={{ minPhotos: 2, maxPhotos: 2 }}
           render={{ image: renderPrestationImage }}
+          onClick={({ index }) => setLightboxIndex(index)}
           defaultContainerWidth={1104}
           sizes={{
             size: "1104px",
@@ -137,6 +164,14 @@ export function PrestationPage({
             ],
           }}
         />
+        {lightboxIndex >= 0 && (
+          <Lightbox
+            slides={photos}
+            open
+            index={lightboxIndex}
+            close={() => setLightboxIndex(-1)}
+          />
+        )}
       </section>
 
       {/* Contact */}
