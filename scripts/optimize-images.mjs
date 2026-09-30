@@ -26,6 +26,7 @@ import sharp from "sharp";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = path.join(__dirname, "..");
+const ORIGINAL_IMAGE_OUTPUT_DIRECTORIES = ["home", "galleries"];
 
 function parseArgs(argv) {
   const dryRun = argv.includes("--dry-run");
@@ -84,6 +85,30 @@ function outPathFor(absIn, imagesRoot, optimizedRoot) {
 
 async function ensureDir(p) {
   await fs.promises.mkdir(path.dirname(p), { recursive: true });
+}
+
+async function removeOrphanedOutputs(outputRoots, expectedOutputs, dryRun) {
+  let removed = 0;
+
+  for (const outputRoot of outputRoots) {
+    if (!fs.existsSync(outputRoot)) continue;
+
+    const existingOutputs = await walkFiles(outputRoot);
+    for (const output of existingOutputs) {
+      if (path.extname(output).toLowerCase() !== ".webp" || expectedOutputs.has(output)) {
+        continue;
+      }
+
+      if (dryRun) {
+        console.error(`Would remove orphaned output: ${path.relative(PROJECT_ROOT, output)}`);
+      } else {
+        await fs.promises.unlink(output);
+      }
+      removed += 1;
+    }
+  }
+
+  return removed;
 }
 
 async function optimizeOne(absIn, absOut, maxWidth, quality, dryRun, force, thumbnails) {
@@ -178,6 +203,7 @@ async function main() {
 
   let done = 0;
   let skipped = 0;
+  const expectedOutputs = new Set();
 
   for (const absIn of candidates) {
     const absOut = outPathFor(absIn, imagesRoot, outputRoot);
@@ -197,6 +223,7 @@ async function main() {
     done += 1;
 
     for (const output of outputs) {
+      expectedOutputs.add(output.path);
       const relOut = path.relative(PROJECT_ROOT, output.path);
       const result = await optimizeOne(
         absIn,
@@ -215,7 +242,17 @@ async function main() {
     }
   }
 
+  const cleanupRoots = thumbnails
+    ? [outputRoot]
+    : !inputRelativePath || inputRelativePath === "."
+      ? ORIGINAL_IMAGE_OUTPUT_DIRECTORIES.map((directory) =>
+          path.join(outputRoot, directory),
+        )
+      : [outputRoot];
+  const removed = await removeOrphanedOutputs(cleanupRoots, expectedOutputs, dryRun);
+
   console.error(`Done. Skipped ${skipped} (already up-to-date).`);
+  console.error(`${dryRun ? "Would remove" : "Removed"} ${removed} orphaned output(s).`);
 
   if (dryRun) {
     console.error("Dry run: outputs were not written.");

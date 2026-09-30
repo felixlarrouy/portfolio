@@ -1,23 +1,6 @@
 {
   "home": [
     {
-      "src": "/images/home/01.webp",
-      "width": 1365,
-      "height": 2048,
-      "srcSet": [
-        {
-          "src": "/images-thumbnails/home/01.webp",
-          "width": 640,
-          "height": 960
-        },
-        {
-          "src": "/images-thumbnails/home/01-1280.webp",
-          "width": 1280,
-          "height": 1920
-        }
-      ]
-    },
-    {
       "src": "/images/home/02.webp",
       "width": 2048,
       "height": 1365,
@@ -31,23 +14,6 @@
           "src": "/images-thumbnails/home/02-1280.webp",
           "width": 1280,
           "height": 853
-        }
-      ]
-    },
-    {
-      "src": "/images/home/03.webp",
-      "width": 1365,
-      "height": 2048,
-      "srcSet": [
-        {
-          "src": "/images-thumbnails/home/03.webp",
-          "width": 640,
-          "height": 960
-        },
-        {
-          "src": "/images-thumbnails/home/03-1280.webp",
-          "width": 1280,
-          "height": 1920
         }
       ]
     },
@@ -103,40 +69,6 @@
       ]
     },
     {
-      "src": "/images/home/07.webp",
-      "width": 1365,
-      "height": 2048,
-      "srcSet": [
-        {
-          "src": "/images-thumbnails/home/07.webp",
-          "width": 640,
-          "height": 960
-        },
-        {
-          "src": "/images-thumbnails/home/07-1280.webp",
-          "width": 1280,
-          "height": 1920
-        }
-      ]
-    },
-    {
-      "src": "/images/home/08.webp",
-      "width": 2048,
-      "height": 1365,
-      "srcSet": [
-        {
-          "src": "/images-thumbnails/home/08.webp",
-          "width": 640,
-          "height": 427
-        },
-        {
-          "src": "/images-thumbnails/home/08-1280.webp",
-          "width": 1280,
-          "height": 853
-        }
-      ]
-    },
-    {
       "src": "/images/home/09.webp",
       "width": 1365,
       "height": 2048,
@@ -150,23 +82,6 @@
           "src": "/images-thumbnails/home/09-1280.webp",
           "width": 1280,
           "height": 1920
-        }
-      ]
-    },
-    {
-      "src": "/images/home/091.webp",
-      "width": 2048,
-      "height": 1365,
-      "srcSet": [
-        {
-          "src": "/images-thumbnails/home/091.webp",
-          "width": 640,
-          "height": 427
-        },
-        {
-          "src": "/images-thumbnails/home/091-1280.webp",
-          "width": 1280,
-          "height": 853
         }
       ]
     },
