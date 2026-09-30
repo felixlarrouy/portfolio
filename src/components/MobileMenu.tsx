@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { socialLinks } from "@/data/socialLinks";
 
 export function MobileMenu() {
@@ -35,8 +36,8 @@ export function MobileMenu() {
         </span>
       </button>
 
-      {open && (
-        <nav className="fixed inset-x-0 top-[110px] bottom-0 z-30 flex items-center justify-center bg-white px-6">
+      {open && createPortal(
+        <nav className="fixed inset-0 z-[35] flex items-center justify-center bg-white px-6 pt-20">
           <div className="relative flex h-full w-full items-center justify-center text-center">
             <div className="flex flex-col items-center gap-10">
 
@@ -132,7 +133,8 @@ export function MobileMenu() {
             </div>
 
           </div>
-        </nav>
+        </nav>,
+        document.body,
       )}
     </div>
   );

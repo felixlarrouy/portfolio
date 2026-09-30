@@ -1,11 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import Link from "next/link";
 import { ImageContextMenuGuard } from "@/components/ImageContextMenuGuard";
 import "./globals.css";
 import "react-photo-album/rows.css";
 import "react-photo-album/masonry.css";
-import { HeaderNav } from "@/components/HeaderNav";
-import { MobileMenu } from "@/components/MobileMenu";
+import { SiteHeader } from "@/components/SiteHeader";
 import { socialLinks } from "@/data/socialLinks";
 
 export const metadata: Metadata = {
@@ -33,32 +31,7 @@ export default function RootLayout({
         <ImageContextMenuGuard />
 
         <div className="flex min-h-screen flex-col">
-          <header className="relative z-40 bg-white pt-4 md:pt-10">
-            <div className="mx-auto max-w-6xl px-6">
-
-              {/* Header principal */}
-              <div className="flex items-start justify-between gap-4">
-                <div className="flex flex-col">
-                  <Link
-                    href="/"
-                    className="text-3xl font-medium"
-                  >
-                    Félix Larrouy
-                  </Link>
-                  <div className="text-sm font-medium text-neutral-500">
-                    <p>Photographe outdoor basé à Annecy, France</p>
-                  </div>
-                </div>
-
-                {/* Navigation desktop */}
-                <HeaderNav />
-
-                {/* Menu mobile */}
-                <MobileMenu />
-
-              </div>
-            </div>
-          </header>
+          <SiteHeader />
 
           <main className="flex-1">
             <div className="mx-auto max-w-6xl px-6 py-10">
