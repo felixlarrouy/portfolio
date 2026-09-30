@@ -29,6 +29,16 @@ export const galleries = {
       },
       heroSrc: "/images/galleries/trailrunningawards2025/DSC_6321.webp",
     },
+        winter2026: {
+      title: "Hiver 2025/2026",
+      intro: "Série réalisée au fil des sorties durant l'hiver 2025/2026, entre la Haute Savoie, la Savoie et l'Isère.",
+      heroSrc: "/images/galleries/winter2026/DSC00161.webp",
+    },
+    biketrip : {
+      title: "Voyage à vélo à travers l'Europe",
+      intro: "Projet perso de traversée de l'Europe à vélo, depuis Tarifa jusqu'au Cap Nord.",
+      heroSrc: "/images/galleries/biketrip/DSC01999.webp",
+    },
     testingnutritionyanaa: {
       title: "Test de produits de nutrition — YANAA",
       intro:
@@ -82,16 +92,6 @@ export const galleries = {
         "dans deux lieux différents : l'atelier de la marque et un studio de tournage. Ce shooting m'a sorti de ma zone de confort, " + 
         "moi qui suis habitué à la photographie en extérieur.",
       heroSrc: "/images/galleries/clipmils/DSC_5836.webp",
-    },
-    winter2026: {
-      title: "Hiver 2025/2026",
-      intro: "Série réalisée au fil des sorties durant l'hiver 2025/2026, entre la Haute Savoie, la Savoie et l'Isère.",
-      heroSrc: "/images/galleries/winter2026/DSC00161.webp",
-    },
-    biketrip : {
-      title: "Voyage à vélo à travers l'Europe",
-      intro: "Projet perso de traversée de l'Europe à vélo, depuis Tarifa jusqu'au Cap Nord.",
-      heroSrc: "/images/galleries/biketrip/DSC01999.webp",
     },
     yoga06092025: {
       title: "Cours de yoga au bord du lac d'Annecy",
