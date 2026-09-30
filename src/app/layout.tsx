@@ -84,7 +84,7 @@ export default function RootLayout({
                   </svg>
                 </a>
 
-                <a
+                {/* <a
                   href={socialLinks.linkedin.href}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -93,7 +93,7 @@ export default function RootLayout({
                   className="inline-flex items-center justify-center text-[1.25rem] font-bold normal-case leading-none"
                 >
                   <span aria-hidden="true">{socialLinks.linkedin.text}</span>
-                </a>
+                </a> */}
 
                 <a
                   href={socialLinks.email.href}

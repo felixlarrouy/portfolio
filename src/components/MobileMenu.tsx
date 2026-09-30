@@ -109,7 +109,7 @@ export function MobileMenu() {
                   <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
                 </svg>
               </a>
-              <a
+              {/* <a
                 href={socialLinks.linkedin.href}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -119,7 +119,7 @@ export function MobileMenu() {
                 className="text-lg font-bold leading-none"
               >
                 <span aria-hidden="true">{socialLinks.linkedin.text}</span>
-              </a>
+              </a> */}
               <a
                 href={socialLinks.email.href}
                 onClick={closeMenu}

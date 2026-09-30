@@ -112,7 +112,7 @@ export function HeaderNav() {
             <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
           </svg>
         </a>
-        <a
+        {/* <a
           href={socialLinks.linkedin.href}
           target="_blank"
           rel="noopener noreferrer"
@@ -121,7 +121,7 @@ export function HeaderNav() {
           className="text-sm font-bold normal-case leading-none"
         >
           <span aria-hidden="true">{socialLinks.linkedin.text}</span>
-        </a>
+        </a> */}
         <a
           href={socialLinks.email.href}
           aria-label={socialLinks.email.label}
