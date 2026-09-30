@@ -36,7 +36,7 @@ export function SiteHeader() {
 
   return (
     <header
-      className={`sticky top-0 z-40 bg-white/95 backdrop-blur transition-[padding] duration-200 ${
+      className={`sticky top-0 z-40 bg-white/95 backdrop-blur transition-[padding] duration-350 ease-in-out ${
         isCompact ? "py-2" : "pt-4 md:pt-10"
       }`}
     >
@@ -45,14 +45,14 @@ export function SiteHeader() {
           <div className="flex flex-col">
             <Link
               href="/"
-              className={`font-medium transition-[font-size] duration-200 ${
+              className={`font-medium transition-[font-size] duration-350 ease-in-out ${
                 isCompact ? "text-xl" : "text-3xl"
               }`}
             >
               Félix Larrouy
             </Link>
             <div
-              className={`overflow-hidden text-sm font-medium text-neutral-500 transition-[max-height,opacity] duration-200 ${
+              className={`overflow-hidden text-sm font-medium text-neutral-500 transition-[max-height,opacity] duration-350 ease-in-out ${
                 isCompact ? "max-h-0 opacity-0" : "max-h-6 opacity-100"
               }`}
             >

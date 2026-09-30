@@ -9,7 +9,7 @@ export function HeaderNav() {
   const pathname = usePathname();
   const [isPrestationsMenuOpen, setIsPrestationsMenuOpen] = useState(false);
 
-  const isGalleries = pathname === "/galleries";
+  const isGalleries = pathname === "/galleries" || pathname.startsWith("/galleries/");
   const isPrestations = pathname === "/prestations" || pathname.startsWith("/prestations/");
   const isAbout = pathname === "/about";
 
