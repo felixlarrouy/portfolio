@@ -1,11 +1,13 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { socialLinks } from "@/data/socialLinks";
 
 export function MobileMenu() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
   const closeMenu = () => setOpen(false);
@@ -40,6 +42,15 @@ export function MobileMenu() {
         <nav className="fixed inset-0 z-[35] flex items-center justify-center bg-white px-6 pt-20">
           <div className="relative flex h-full w-full items-center justify-center text-center">
             <div className="flex flex-col items-center gap-10">
+
+            <Link
+              href="/"
+              onClick={closeMenu}
+              aria-current={pathname === "/" ? "page" : undefined}
+              className={`text-3xl font-semibold hover:opacity-60 ${pathname === "/" ? "decoration-1" : ""}`}
+            >
+              Portfolio
+            </Link>
 
             <Link
               href="/galleries"

@@ -9,12 +9,21 @@ export function HeaderNav() {
   const pathname = usePathname();
   const [isPrestationsMenuOpen, setIsPrestationsMenuOpen] = useState(false);
 
+  const isPortfolio = pathname === "/";
   const isGalleries = pathname === "/galleries" || pathname.startsWith("/galleries/");
   const isPrestations = pathname === "/prestations" || pathname.startsWith("/prestations/");
   const isAbout = pathname === "/about";
 
   return (
     <nav className="hidden items-center gap-6 text-base font-medium md:flex">
+      <Link
+        href="/"
+        aria-current={isPortfolio ? "page" : undefined}
+        className={isPortfolio ? "underline decoration-1 underline-offset-4" : ""}
+      >
+        Portfolio
+      </Link>
+
       <Link
         href="/galleries"
         aria-current={isGalleries ? "page" : undefined}
