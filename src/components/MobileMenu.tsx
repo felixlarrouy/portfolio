@@ -10,6 +10,11 @@ export function MobileMenu() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
+  const isPortfolio = pathname === "/";
+  const isGalleries = pathname === "/galleries" || pathname.startsWith("/galleries/");
+  const isPrestations = pathname === "/prestations" || pathname.startsWith("/prestations/");
+  const isAbout = pathname === "/about";
+
   const closeMenu = () => setOpen(false);
 
   useEffect(() => {
@@ -46,8 +51,8 @@ export function MobileMenu() {
             <Link
               href="/"
               onClick={closeMenu}
-              aria-current={pathname === "/" ? "page" : undefined}
-              className={`text-3xl font-semibold hover:opacity-60 ${pathname === "/" ? "decoration-1" : ""}`}
+              aria-current={isPortfolio ? "page" : undefined}
+              className={`text-3xl font-semibold hover:opacity-60 ${isPortfolio ? "underline decoration-1 underline-offset-4" : ""}`}
             >
               Portfolio
             </Link>
@@ -55,7 +60,8 @@ export function MobileMenu() {
             <Link
               href="/galleries"
               onClick={closeMenu}
-              className="text-3xl font-semibold hover:opacity-60"
+              aria-current={isGalleries ? "page" : undefined}
+              className={`text-3xl font-semibold hover:opacity-60 ${isGalleries ? "underline decoration-1 underline-offset-4" : ""}`}
             >
               Galeries photos
             </Link>
@@ -64,7 +70,8 @@ export function MobileMenu() {
               <Link
                 href="/prestations"
                 onClick={closeMenu}
-                className="text-3xl font-semibold hover:opacity-60"
+                aria-current={isPrestations ? "page" : undefined}
+                className={`text-3xl font-semibold hover:opacity-60 ${isPrestations ? "underline decoration-1 underline-offset-4" : ""}`}
               >
                 Prestations
               </Link>
@@ -73,7 +80,8 @@ export function MobileMenu() {
                 <Link
                   href="/prestations/evenements-sportifs"
                   onClick={closeMenu}
-                  className="text-sm font-semibold text-neutral-600 hover:text-black"
+                  aria-current={pathname === "/prestations/evenements-sportifs" ? "page" : undefined}
+                  className={`text-sm font-semibold text-neutral-600 hover:text-black ${pathname === "/prestations/evenements-sportifs" ? "underline decoration-1 underline-offset-4" : ""}`}
                 >
                   Événements sportifs
                 </Link>
@@ -81,7 +89,8 @@ export function MobileMenu() {
                 <Link
                   href="/prestations/reportage-outdoor"
                   onClick={closeMenu}
-                  className="text-sm font-semibold text-neutral-600 hover:text-black"
+                  aria-current={pathname === "/prestations/reportage-outdoor" ? "page" : undefined}
+                  className={`text-sm font-semibold text-neutral-600 hover:text-black ${pathname === "/prestations/reportage-outdoor" ? "underline decoration-1 underline-offset-4" : ""}`}
                 >
                   Reportage outdoor
                 </Link>
@@ -89,7 +98,8 @@ export function MobileMenu() {
                 <Link
                   href="/prestations/communication-entreprise"
                   onClick={closeMenu}
-                  className="text-sm font-semibold text-neutral-600 hover:text-black"
+                  aria-current={pathname === "/prestations/communication-entreprise" ? "page" : undefined}
+                  className={`text-sm font-semibold text-neutral-600 hover:text-black ${pathname === "/prestations/communication-entreprise" ? "underline decoration-1 underline-offset-4" : ""}`}
                 >
                   Communication & entreprise
                 </Link>
@@ -99,7 +109,8 @@ export function MobileMenu() {
             <Link
               href="/about"
               onClick={closeMenu}
-              className="text-3xl font-semibold hover:opacity-60"
+              aria-current={isAbout ? "page" : undefined}
+              className={`text-3xl font-semibold hover:opacity-60 ${isAbout ? "underline decoration-1 underline-offset-4" : ""}`}
             >
               À propos
             </Link>
