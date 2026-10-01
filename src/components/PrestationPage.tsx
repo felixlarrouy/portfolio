@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import dynamic from "next/dynamic";
 import { useState } from "react";
 import type { ComponentProps } from "react";
+import { socialLinks } from "@/data/socialLinks";
 import {
   RenderImageContext,
   RenderImageProps,
@@ -96,8 +96,8 @@ export function PrestationPage({
   return (
     <div className="space-y-8">
       {/* Hero */}
-      <section className="grid grid-cols-1 gap-10 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] md:items-start md:gap-16">
-        <div className="self-start">
+      <section className="grid grid-cols-1 gap-10 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] md:items-start md:gap-x-16 md:gap-y-0">
+        <div className="self-start md:col-start-1 md:row-start-1">
           <p className="mb-4 text-sm font-medium text-neutral-500">
             {number} — Prestations
           </p>
@@ -110,25 +110,9 @@ export function PrestationPage({
           <p className="mt-2 leading-7 text-neutral-600">
             {description}
           </p>
-
-          {/* Content */}
-          <section className="max-w-3xl space-y-8 mt-8">
-            {contentSections.map((section) => (
-              <div key={section.title}>
-                <h2 className="text-2xl font-medium">
-                  {section.title}
-                </h2>
-
-                <p className="mt-2 leading-7 text-neutral-600">
-                  {section.text}
-                </p>
-              </div>
-            ))}
-          </section>
-
         </div>
 
-        <div className="relative aspect-[4/5] overflow-hidden border-3 border-black bg-neutral-100 md:self-start">
+        <div className="relative aspect-[4/5] overflow-hidden border-3 border-black bg-neutral-100 md:col-start-2 md:row-span-2 md:row-start-1 md:self-start">
           <Image
             src={heroImage.src}
             alt={heroImage.alt}
@@ -138,6 +122,20 @@ export function PrestationPage({
             className="object-cover"
           />
         </div>
+
+        <section className="max-w-3xl space-y-8 md:col-start-1 md:row-start-2 md:mt-8">
+          {contentSections.map((section) => (
+            <div key={section.title}>
+              <h2 className="text-2xl font-medium">
+                {section.title}
+              </h2>
+
+              <p className="mt-2 leading-7 text-neutral-600">
+                {section.text}
+              </p>
+            </div>
+          ))}
+        </section>
       </section>
 
       {/* Examples */}
@@ -185,12 +183,12 @@ export function PrestationPage({
             {contactText}
           </p>
 
-          <Link
-            href="/about"
+          <a
+            href={socialLinks.email.href}
             className="mt-6 inline-block text-sm font-medium underline underline-offset-4 hover:opacity-60"
           >
             Me contacter →
-          </Link>
+          </a>
         </div>
       </section>
     </div>
