@@ -28,11 +28,11 @@ export default function EvenementsSportifsPage() {
       contentSections={[
         {
           title: "Un reportage photo au service de votre événement",
-          text: "Je couvre les différents temps forts de votre événement afin de créer une série d'images cohérente et directement exploitable pour votre communication : site internet, réseaux sociaux, affiches, ou promotion des prochaines éditions.",
+          text: "Je couvre les différents temps forts de votre événement afin de créer une série d'images cohérente et directement exploitable pour votre communication (site internet, réseaux sociaux ou affiches) et la promotion des prochaines éditions.",
         },
         {
           title: "Photographe sportif en Haute-Savoie et dans les Alpes",
-          text: "Basé à d'Annecy, j'interviens principalement en Haute-Savoie, en Savoie et dans les Alpes. Je peux également me déplacer pour couvrir des événements sportifs ailleurs en France ou dans le monde selon votre projet.",
+          text: "Basé à Annecy, j'interviens principalement en Haute-Savoie, en Savoie et dans les Alpes. Je peux également me déplacer pour couvrir des événements sportifs ailleurs en France ou dans le monde selon votre projet.",
         },
       ]}
       contactTitle="Vous organisez un événement sportif ?"

@@ -19,7 +19,7 @@ export default function Page() {
     <PrestationPage
       number="02"
       title="Reportage outdoor"
-      intro="Je réalise des reportages photo en montagne et en pleine nature pour raconter des aventures, des expéditions, des pratiques sportives et des projets outdoor. J'aime y retranscire l'action, l'environnement mais aussi les moments de vie avec la passion qui me caractérise."
+      intro="Je réalise des reportages photo en montagne et en pleine nature pour raconter des aventures, des expéditions, des pratiques sportives et des projets outdoor. J'aime y retranscrire l'action, l'environnement, mais aussi les moments de vie, avec la passion qui me caractérise."
       description="Je m'adapte aux contraintes du terrain pour créer des images immersives qui retranscrivent l'expérience vécue."
       heroImage={{
         src: "/images/prestations/reportage-outdoor/hero.webp",
@@ -28,8 +28,8 @@ export default function Page() {
       photos={photos}
       contentSections={[
         {
-          title: "Être au coeur de votre événement ou de votre projet",
-          text: "Mon expérience sportive me permet de suivre les participants et de m'adapter aux contraintes du terrain pour créer des images immersives et naturelles, avec pour but d'être au plus proche de l'action.",
+          title: "Être au cœur de votre événement ou de votre projet",
+          text: "Mon expérience sportive me permet de suivre les participants et de m'adapter aux contraintes du terrain pour créer des images immersives et naturelles, avec pour but d'être au plus près de l'action.",
         },
       ]}
       contactTitle="Vous avez un projet outdoor ?"

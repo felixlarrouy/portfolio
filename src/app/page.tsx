@@ -3,7 +3,7 @@ import { PhotoGallery } from "@/components/PhotoGallery";
 import manifest from "@/data/photo-manifest.json";
 
 export const metadata: Metadata = {
-  title: "Felix Larrouy Photographie",
+  title: "Félix Larrouy Photographie",
   description: "Photographe outdoor à Annecy.",
 };
 

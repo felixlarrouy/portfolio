@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Prestations photo | Felix Larrouy Photographie",
+  title: "Prestations photo | Félix Larrouy Photographie",
   description: "Reportages photo pour événements sportifs, activités outdoor et communication d'entreprise autour d'Annecy.",
 };
 
@@ -12,7 +12,7 @@ const prestations = [
     number: "01",
     title: "Événements sportifs",
     description:
-      "Couverture photo de compétitions de trail, cyclisme, triathlon, ski, et autres événements sportifs. Je produits des images dynamiques et naturelles pour documenter l’événement et mettre en valeur l'organisation et les participants.",
+      "Couverture photo de compétitions de trail, cyclisme, triathlon, ski et autres événements sportifs. Je produis des images dynamiques et naturelles pour documenter l’événement et mettre en valeur l’organisation et les participants.",
     image: "/images/prestations/evenements-sportifs/hero.webp",
     href: "/prestations/evenements-sportifs",
   },
@@ -20,7 +20,7 @@ const prestations = [
     number: "02",
     title: "Reportage outdoor",
     description:
-      "Des photos au coeur de votre social run/ride, de votre expédition (alpinisme, ski de rando...), ou tout autre événement méritant d'être documenté avec des images qui retranscrivent l'ambiance, les paysages, et l'expérience vécue sur le terrain.",
+      "Des photos au cœur de votre social run/ride, de votre expédition (alpinisme, ski de rando...) ou de tout autre événement, avec des images qui retranscrivent l'ambiance, les paysages et l'expérience vécue sur le terrain.",
     image: "/images/prestations/reportage-outdoor/hero.webp",
     href: "/prestations/reportage-outdoor",
   },
@@ -28,7 +28,7 @@ const prestations = [
     number: "03",
     title: "Communication & entreprise",
     description:
-      "Shooting des produits de votre marque en conditions réelles, mise en avant de vos services d'entreprise, je vous livre des photos destinées à votre communication sur votre site internet et vos réseaux sociaux, adaptées à votre activité et votre image.",
+      "Shooting de produits de votre marque en conditions réelles, mise en avant des services de votre entreprise : je vous livre des photos adaptées à votre activité et à votre image, destinées à votre site internet et à vos réseaux sociaux.",
     image: "/images/prestations/communication-entreprise/hero.webp",
     href: "/prestations/communication-entreprise",
   },

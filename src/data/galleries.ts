@@ -1,7 +1,7 @@
 export const galleries = {
     perronsvallorcine : {
       title: "Traversée des Perrons de Vallorcine — Course d'arête",
-      intro: "Série photo réalisée lors de la course d'arrête des Perrons de Vallorcine pour Cristina Pogacean, guide de haute montagne.",
+      intro: "Série photo réalisée lors de la course d'arête des Perrons de Vallorcine pour Cristina Pogacean, guide de haute montagne.",
       heroSrc: "/images/galleries/perronsvallorcine/DSC02139.webp",
     },
     jo2024climb: {
@@ -31,7 +31,7 @@ export const galleries = {
     },
         winter2026: {
       title: "Hiver 2025/2026",
-      intro: "Série réalisée au fil des sorties durant l'hiver 2025/2026, entre la Haute Savoie, la Savoie et l'Isère.",
+      intro: "Série réalisée au fil des sorties durant l'hiver 2025/2026, entre la Haute-Savoie, la Savoie et l'Isère.",
       heroSrc: "/images/galleries/winter2026/DSC00161.webp",
     },
     biketrip : {
@@ -50,7 +50,7 @@ export const galleries = {
       intro:  
         "Couverture photo d'un social run organisé par l'agence Püls en collaboration avec plusieurs marques : Rossignol et Lago. " +
         "La première partie du shooting a eu lieu en magasin (présentation des produits aux participants) et la seconde partie a eu lieu en extérieur. " + 
-        "J'ai pu suivre le groupe en courant avec mon appreil photo pour être au plus proche des coureurs et capturer l'ambiance de l'événement.",
+        "J'ai pu suivre le groupe en courant avec mon appareil photo pour être au plus près des coureurs et capturer l'ambiance de l'événement.",
       heroSrc: "/images/galleries/runpuls30102025/DSC_5203-2.webp",
     },
     runpuls17122025: {
@@ -58,7 +58,7 @@ export const galleries = {
       intro:
         "Couverture photo d'un social run organisé par l'agence Püls en collaboration avec deux marques : Mizuno et Shokz. " +
         "La première partie du shooting a eu lieu en magasin (présentation des produits aux participants) et la seconde partie a eu lieu en extérieur. " +
-        "J'ai pu suivre le groupe en courant avec mon appreil photo pour être au plus proche des coureurs et capturer l'ambiance de l'événement. ",
+        "J'ai pu suivre le groupe en courant avec mon appareil photo pour être au plus près des coureurs et capturer l'ambiance de l'événement. ",
       introLink: {
         href: "https://www.puls-agency.com/run-communautaire/run-communautaire-annecy-courir-ensemble-tester-partager/",
         label: "Lien vers l'article de presse.",

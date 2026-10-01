@@ -7,7 +7,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { socialLinks } from "@/data/socialLinks";
 
 export const metadata: Metadata = {
-  title: "Felix Larrouy Photographie",
+  title: "Félix Larrouy Photographie",
   description: "Photographe outdoor et aventure autour d'Annecy.",
   metadataBase: new URL("https://www.felixlarrouy-photographie.com"),
   openGraph: {

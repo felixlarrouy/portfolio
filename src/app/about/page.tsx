@@ -3,7 +3,7 @@ import Image from "next/image";
 import { socialLinks } from "@/data/socialLinks";
 
 export const metadata: Metadata = {
-  title: "À propos | Felix Larrouy Photographie",
+  title: "À propos | Félix Larrouy Photographie",
   description: "Photographe outdoor à Annecy, passionné de montagne, de sport et de photographie outdoor.",
 };
 
@@ -40,7 +40,7 @@ export default function AboutPage() {
       <section className="space-y-8">
         <div className="space-y-6">
           <h2 className="text-lg font-medium">
-            Un amoureux de sports de montagnes qui aime transmettre cette passion en images.
+            Un amoureux des sports de montagne qui aime transmettre cette passion en images.
           </h2>
           <p className="max-w-prose text-sm leading-relaxed text-neutral-600">
             Aussi loin que je m'en souvienne, j'ai toujours eu un appareil photo entre les mains. Du Kodak jetable lors des premières 
@@ -49,11 +49,11 @@ export default function AboutPage() {
             émotions, des souvenirs, des moments de vie, mais aussi de mettre en valeur ce qui a le mérite de l'être.
           </p>
           <p className="max-w-prose text-sm leading-relaxed text-neutral-600">
-            J'aime y allier ma deuxième passion, le sport. Je suis en effet un Annécien de cœur par amour de la montagne, l'environnement
-            qui me correspond le mieux et me permet de m'épanouir tant personnellement que professionnellement.
+            J'aime y allier ma deuxième passion, le sport. Annécien de cœur, je suis particulièrement attaché à la montagne, un
+            environnement dans lequel je m'épanouis, tant personnellement que professionnellement.
           </p>
           <p className="max-w-prose text-sm leading-relaxed text-neutral-600">
-            Je suis néanmoins ouvert à des propositions autres que liées au milieu du sport, n'hésitez pas à me contacter pour échanger sur vos projets.
+            Je reste néanmoins ouvert à des projets qui ne sont pas liés au milieu du sport. N'hésitez pas à me contacter pour en discuter.
           </p>
         </div>
 
@@ -65,7 +65,7 @@ export default function AboutPage() {
           <div className="space-y-2 text-sm">
             <div className="space-y-1 text-neutral-600">
               <p>
-                Email:{" "}
+                E-mail :{" "}
                 <a
                   href={socialLinks.email.href}
                   className="underline lowercase underline-offset-4 hover:text-black"
