@@ -151,8 +151,8 @@ export function PrestationPage({
         <RowsPhotoAlbum
           photos={photos}
           targetRowHeight={320}
-          padding={(containerWidth) => (containerWidth < 768 ? 3 : 5)}
-          spacing={(containerWidth) => (containerWidth < 768 ? 10 : 25)}
+          padding={(containerWidth) => (containerWidth < 768 ? 2 : 5)}
+          spacing={(containerWidth) => (containerWidth < 768 ? 3 : 25)}
           rowConstraints={{ minPhotos: 2, maxPhotos: 2 }}
           render={{ image: renderPrestationImage }}
           onClick={({ index }) => setLightboxIndex(index)}

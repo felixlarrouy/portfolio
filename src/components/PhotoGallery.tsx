@@ -60,8 +60,8 @@ export function PhotoGallery({ photos }: { photos: Photo[] }) {
               ],
             }}
             columns={(containerWidth) => (containerWidth < 768 ? 2 : 4)}
-            padding={(containerWidth) => (containerWidth < 768 ? 3 : 5)}
-            spacing={(containerWidth) => (containerWidth < 768 ? 10 : 25)}
+            padding={(containerWidth) => (containerWidth < 768 ? 2 : 5)}
+            spacing={(containerWidth) => (containerWidth < 768 ? 3 : 25)}
             componentsProps={{
               image: { className: "border-3 border-black" },
             }}
