@@ -43,4 +43,5 @@ next-env.d.ts
 # Full-res photos: keep local / deploy separately; do not commit (avoids huge Git pushes)
 /public/images/
 /public/images-thumbnails/
+/public/FL_logo.png
 /images-original/
