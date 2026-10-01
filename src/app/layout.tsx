@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: "Photographe outdoor et aventure autour d'Annecy.",
   metadataBase: new URL("https://www.felixlarrouy-photographie.com"),
   openGraph: {
-    images: ["/images/galleries/perronsvallorcine/DSC02139.webp"],
+    images: ["FL-Logo.png"],
   },
 };
 
