@@ -17,14 +17,16 @@ export default function GalleriesPage() {
       </header>
 
       <section className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8">
-        {Object.entries(galleries).map(([slug, gallery]) => (
+        {Object.entries(galleries)
+          .filter(([, gallery]) => !("listed" in gallery) || gallery.listed)
+          .map(([slug, gallery]) => (
           <GalleryCard
             key={slug}
             slug={slug}
             title={gallery.title}
             heroSrc={gallery.heroSrc}
           />
-        ))}
+          ))}
       </section>
     </div>
   );

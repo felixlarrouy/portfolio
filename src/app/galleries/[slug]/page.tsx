@@ -22,6 +22,9 @@ export async function generateMetadata({ params }: PageProps) {
 
   return {
     title: `${gallery.title} | Félix Larrouy Photographie`,
+    robots: "listed" in gallery && !gallery.listed
+      ? { index: false, follow: false }
+      : undefined,
   };
 }
 
