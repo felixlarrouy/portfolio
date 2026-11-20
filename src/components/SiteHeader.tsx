@@ -42,8 +42,8 @@ export function SiteHeader() {
               Félix Larrouy
             </Link>
             <div
-              className={`overflow-hidden text-sm font-medium text-neutral-500 mb-4 transition-[max-height,opacity] duration-350 ease-in-out${
-                isCompact ? "max-h-0 opacity-0" : "max-h-6 opacity-100"
+              className={`overflow-hidden text-sm font-medium text-neutral-500 transition-[max-height,opacity] duration-350 ease-in-out${
+                isCompact ? "max-h-0 opacity-0 mb-0" : "max-h-6 opacity-100 mb-4"
               }`}
             >
               <p>Photographe outdoor basé à Annecy, France</p>
