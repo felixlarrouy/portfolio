@@ -103,6 +103,10 @@ export function PhotoGallery({ photos }: { photos: Photo[] }) {
           open
           index={index}
           close={() => setIndex(-1)}
+          controller={{
+            closeOnBackdropClick: true,
+            closeOnPullDown: true,
+          }}
         />
       )}
     </>
