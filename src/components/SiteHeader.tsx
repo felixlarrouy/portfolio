@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -9,25 +10,14 @@ export function SiteHeader() {
   const [isCompact, setIsCompact] = useState(false);
 
   useEffect(() => {
-    let previousScrollY = window.scrollY;
-
     const handleScroll = () => {
-      const maxScrollY = Math.max(
-        0,
-        document.documentElement.scrollHeight - window.innerHeight,
-      );
-      const currentScrollY = Math.min(Math.max(window.scrollY, 0), maxScrollY);
-      const isAtBottom = maxScrollY - currentScrollY <= 1;
+      const currentScrollY = Math.max(0, window.scrollY);
 
       if (currentScrollY <= 32) {
         setIsCompact(false);
-      } else if (currentScrollY > previousScrollY && currentScrollY > 80) {
+      } else if (currentScrollY > 80) {
         setIsCompact(true);
-      } else if (currentScrollY < previousScrollY && !isAtBottom) {
-        setIsCompact(false);
       }
-
-      previousScrollY = currentScrollY;
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
