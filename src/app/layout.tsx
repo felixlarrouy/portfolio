@@ -6,6 +6,7 @@ import "react-photo-album/masonry.css";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { FloatingGalleryCTA } from "@/components/FloatingGalleryCTA";
+import { FloatingGalleryBackButton } from "@/components/FloatingGalleryBackButton";
 
 export const metadata: Metadata = {
   title: "Félix Larrouy Photographie",
@@ -42,6 +43,7 @@ export default function RootLayout({
 
           <SiteFooter />
           <FloatingGalleryCTA />
+          <FloatingGalleryBackButton />
         </div>
       </body>
     </html>
