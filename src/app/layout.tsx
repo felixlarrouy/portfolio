@@ -5,6 +5,7 @@ import "react-photo-album/rows.css";
 import "react-photo-album/masonry.css";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { FloatingGalleryCTA } from "@/components/FloatingGalleryCTA";
 
 export const metadata: Metadata = {
   title: "Félix Larrouy Photographie",
@@ -40,6 +41,7 @@ export default function RootLayout({
           </main>
 
           <SiteFooter />
+          <FloatingGalleryCTA />
         </div>
       </body>
     </html>
