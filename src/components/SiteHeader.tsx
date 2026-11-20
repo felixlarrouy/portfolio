@@ -31,8 +31,9 @@ export function SiteHeader() {
       }`}
     >
       <div className="mx-auto max-w-6xl px-6">
-        <div className={`flex justify-between gap-4 ${isCompact ? "items-center" : "items-start"}`}>
-          <div className="flex flex-col">
+        <div className="flex justify-between items-center gap-4">
+
+          <div className="flex flex-col justify-center">
             <Link
               href="/"
               className={`font-medium transition-[font-size] duration-350 ease-in-out ${
@@ -41,9 +42,12 @@ export function SiteHeader() {
             >
               Félix Larrouy
             </Link>
+
             <div
-              className={`overflow-hidden text-sm font-medium text-neutral-500 transition-[max-height,opacity] duration-350 ease-in-out${
-                isCompact ? "max-h-0 opacity-0 mb-0" : "max-h-6 opacity-100 mb-4"
+              className={`overflow-hidden text-sm font-medium text-neutral-500 transition-[max-height,opacity] duration-350 ease-in-out ${
+                isCompact
+                  ? "max-h-0 opacity-0 mb-0"
+                  : "max-h-6 opacity-100 mb-4"
               }`}
             >
               <p>Photographe outdoor basé à Annecy, France</p>
@@ -52,6 +56,7 @@ export function SiteHeader() {
 
           <HeaderNav />
           <MobileMenu />
+
         </div>
       </div>
     </header>
