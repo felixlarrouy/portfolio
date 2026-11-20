@@ -4,7 +4,7 @@ import "./globals.css";
 import "react-photo-album/rows.css";
 import "react-photo-album/masonry.css";
 import { SiteHeader } from "@/components/SiteHeader";
-import { socialLinks } from "@/data/socialLinks";
+import { SiteFooter } from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
   title: "Félix Larrouy Photographie",
@@ -39,34 +39,7 @@ export default function RootLayout({
             </div>
           </main>
 
-          <footer className="bg-white">
-            <div className="mx-auto max-w-6xl px-6 py-6">
-              <div className="flex items-center justify-center gap-6 text-black">
-                <a
-                  href={socialLinks.instagram.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={socialLinks.instagram.label}
-                  title={socialLinks.instagram.label}
-                  className="inline-flex items-center justify-center"
-                >
-                  <svg viewBox="0 0 24 24" className="h-6 w-6" aria-hidden="true">
-                    <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" strokeWidth="1.8" />
-                    <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" strokeWidth="1.8" />
-                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
-                  </svg>
-                </a>
-                <a
-                  href={socialLinks.email.href}
-                  aria-label={socialLinks.email.label}
-                  title={socialLinks.email.label}
-                  className="inline-flex items-center justify-center text-[1.5rem] font-semibold normal-case"
-                >
-                  <span aria-hidden="true">{socialLinks.email.text}</span>
-                </a>
-              </div>
-            </div>
-          </footer>
+          <SiteFooter />
         </div>
       </body>
     </html>
