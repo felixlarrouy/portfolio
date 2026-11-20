@@ -1,5 +1,6 @@
+
 import type { Metadata } from "next";
-import { PhotoGallery } from "@/components/PhotoGallery";
+import { HomeGallery } from "@/components/HomeGallery";
 import manifest from "@/data/photo-manifest.json";
 
 export const metadata: Metadata = {
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div id="top" className="space-y-8">
-      <PhotoGallery photos={manifest.home} />
+      <HomeGallery photos={manifest.home} />
     </div>
   );
 }
